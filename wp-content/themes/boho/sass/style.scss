@@ -1,0 +1,61 @@
+/*
+Theme Name: Boho
+Author: Aaron Bery
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import "partials/boilerplate";
+@import "partials/normalize";
+/*
+-------------------------*/
+$darkGreen: #768672;
+$lightGreen: #c4e0be;
+$purple: rgb(85, 26, 139);
+/*
+-------------------------*/
+.alignleft{
+  float: left;
+  padding: 1em 1em 1em 0;
+}
+/*
+-------------------------*/
+body{
+  background: url(/wp-content/themes/boho/images/leaf.gif) repeat-x;
+  background-color: $lightGreen;
+}
+#page{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#main{
+  background: #fff;
+  padding: 1em;
+  border-bottom: 5px solid $darkGreen;
+}
+h1.site-title{
+  text-decoration: none;
+  a{
+    text-decoration: none;
+  }
+}
+.menu{
+  ul{
+    overflow: hidden;
+    padding-left: 0;
+  }
+  li{
+    display: block;
+    float: left;
+    border-right: 1px solid #fff;
+    padding-right: 1em;
+    margin-right: 1em;
+    &:last-child{
+      border-right: 0;
+    }
+    a{
+      color: $purple;
+      text-decoration: none;
+    }
+  }
+}
