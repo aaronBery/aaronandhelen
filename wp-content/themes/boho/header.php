@@ -25,21 +25,39 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" href="/wp-content/themes/boho/style.css" />
-<?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
+<script data-main="<?php echo get_template_directory_uri(); ?>/js/main.js" src="<?php echo get_template_directory_uri(); ?>/js/require.min.js"></script>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<div id="mobile">
+	<h1 class="mobile-header">...use your desktop</h1>
+	<img src="/wp-content/themes/boho/images/rock.jpg">
+</div>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
+		<img src="/wp-content/themes/boho/images/bee.png" id="fairy" width="30px">
+		<!-- <img src="/wp-content/themes/boho/images/bear.png" id="bear"> -->
+		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--left flowers--top">
+		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--left flowers--bottom">
+		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--top">
+		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--bottom">
+		<script>
+		require(['app/animation']);
+		require(['app/flowers']);
+		</script>
+		<script>
+		//require(['app/animation']);
+		</script>
+		<div class="logo-line logo-line--leftline"></div>
+		<div class="site-header site-header--date">20.06.2015</div>
 		<hgroup>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<img src="<?php echo get_template_directory_uri(); ?>/images/frame.png" class="header-frame">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Aaron & Helen<?php //bloginfo( 'name' ); ?></a></h1>
 			<!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
 		</hgroup>
-
+		<div class="site-header site-header--location">Bignor Park</div>
+		<div class="logo-line logo-line--rightline"></div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<!--<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
@@ -52,5 +70,4 @@
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 		<?php endif; ?>
 	</header><!-- #masthead -->
-
 	<div id="main" class="wrapper">

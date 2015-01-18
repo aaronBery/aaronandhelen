@@ -7,55 +7,274 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 @import "partials/boilerplate";
 @import "partials/normalize";
+@import "partials/fonts";
 /*
 -------------------------*/
 $darkGreen: #768672;
 $lightGreen: #c4e0be;
 $purple: rgb(85, 26, 139);
+$containerWidth: 940px;
+//$coral: #FFB894;
+$coral: rgb(247, 178, 170);
+$brown: #895C3C;
 /*
 -------------------------*/
 .alignleft{
   float: left;
   padding: 1em 1em 1em 0;
 }
-/*
--------------------------*/
+/*----------------------------------*/
+
+
+#mobile{
+  display: none;
+}
 body{
-  background: url(/wp-content/themes/boho/images/leaf.gif) repeat-x;
-  background-color: $lightGreen;
+  //background: url(/wp-content/themes/boho/images/meadow.jpg) repeat;
+  background: $coral;
+  //font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Chelsea Market',fantasy;
+  font-weight: lighter;
 }
 #page{
-  max-width: 1000px;
+  width: $containerWidth;
+  //max-width: 1000px;
   margin: 0 auto;
 }
 #main{
-  background: #fff;
+  background: transparent;
   padding: 1em;
-  border-bottom: 5px solid $darkGreen;
+}
+.wrapper{
+  color: white;
+  a{
+    color: white;
+  }
+}
+.home #main{
+  padding: 0;
+  background: transparent;
+}
+header{
+  color: white;
+}
+#masthead {
+  height: 172px;
+  position: relative;
+}
+hgroup{
+  width: 380px;
+  margin: 0 auto;
+  position: relative;
 }
 h1.site-title{
+  color: white;
   text-decoration: none;
+  font-size: 38px;
+  position: relative;
+  top: -3px;
+  text-align: center;
   a{
+    color: white;
     text-decoration: none;
   }
 }
+.site-header{
+  position: absolute;
+  top: 14px;
+}
+.site-header--date{
+  left: 210px;
+}
+.site-header--location{
+  right: 204px;
+}
+.header-frame{
+  position: absolute;
+  top: -72px;
+}
+.logo-line{
+  position: absolute;
+  width: 200px;
+  height: 3px;
+  background: white;
+  top: 23px;
+}
+.logo-line--rightline{
+  right: 0;
+}
+.logo-line--lefttline{
+  left: 0;
+}
+.col-layout{
+  display: block;
+  color: white;
+}
+.col-layout--container{
+  width: 100%;
+  overflow: hidden;
+}
+.col-layout-3col--1-3,.col-layout-3col--2-3,.col-layout-3col--3-3{
+  float: left;
+  width: 30%;
+  background: white;
+  color: $coral;
+  text-align: center;
+  padding: 0.5em 0;
+  a{
+    color: $coral;
+    text-decoration: none;
+  }
+}
+.col-layout-3col--1-3{
+  margin-right: 5%;
+}
+.col-layout-3col--3-3{
+  margin-left: 5%;
+}
 .menu{
   ul{
+    background: white;
     overflow: hidden;
     padding-left: 0;
+    color: $coral;
+    margin: 0;
+    position: relative;
+    top: 47px;
+    width: 935px;
+    border: 2px solid #fff;
   }
   li{
     display: block;
     float: left;
     border-right: 1px solid #fff;
-    padding-right: 1em;
-    margin-right: 1em;
+    padding: 3px 3em;
+    &.current_page_item{
+      background: $coral;
+      color: $brown;
+      a{
+        color: $brown;
+      }
+    }
     &:last-child{
       border-right: 0;
     }
     a{
-      color: $purple;
+      color: $coral;
       text-decoration: none;
     }
   }
+}
+#site-navigation {
+  width: 100%;
+  bottom: 0;
+}
+/* content
+-----------------------------------------------------*/
+#content{
+  text-align: center;
+}
+
+/* carousel styles
+------------------------------------------------------*/
+.carousel--container{
+  display: block;
+  width: 98%;
+  background: #fff;
+  padding: 1%;
+  position: relative;
+  z-index: 1;
+}
+.carousel--element{
+  display: none;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  /* -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);;
+  -webkit-filter: grayscale(1);;
+  filter: grayscale(1);; */
+}
+.carousel--current{
+  display: block;
+}
+.carouselBottom{
+  position: relative;
+  top: -48px;
+  left: -28px;
+}
+.carousel--arrows{
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  top: 42%;
+  display: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.carousel--arrow--right{
+  right: 1em;
+  background-position: right center;
+}
+.carousel--arrow--left{
+  left: 1em;
+  background-position: left center;
+}
+#fairy,#bear{
+  display: none;
+  position: fixed;
+  z-index: 2;
+}
+.flowers{
+  position: fixed;
+  display: none;
+}
+.flowers--left{
+  left: 1em;
+}
+.flowers--right{
+  right: 1em;
+}
+.flowers--top{
+  top: 1em;
+}
+.flowers--bottom{
+  bottom: 1em;
+}
+/* footer
+-------------------------------------*/
+footer{
+  color: white;
+  margin-top: 50px;
+  font-size: 0.7em;
+  a{
+    color: white;
+  }
+}
+
+/* mobile
+--------------------------------------*/
+@media screen and (max-width: 600px) {
+    #mobile{
+      display: block;
+    }
+    #page{
+      display: none;
+    }
+    .mobile-header{
+      color: white;
+      position: absolute;
+      top: 360px;
+      padding-left: 0.5em;
+    }
+}
+/* RSVP
+-----------------------------------------------------*/
+input[type="submit"] {
+  color: $brown;
+}
+fieldset{
+  border: 1px solid white;
 }

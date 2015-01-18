@@ -9,16 +9,19 @@ body {
 }
 
 html {
-	background: #f1f1f1;
+	/*background: #f1f1f1;*/
 }
 
 body {
-	background: #f1f1f1;
+	/*background: #f1f1f1;*/
+	background: rgb(247, 178, 170);
 	min-width: 0;
 	color: #444;
 	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 	line-height: 1.4em;
+	height: auto;
+	padding-bottom: 1em;
 }
 
 a {
@@ -124,8 +127,8 @@ p {
 }
 
 .login h1 a {
-	background-image: url(../images/w-logo-blue.png?ver=20131202);
-	background-image: none, url(../images/wordpress-logo.svg?ver=20131107);
+	/*background-image: url(../images/w-logo-blue.png?ver=20131202);
+	background-image: none, url(../images/wordpress-logo.svg?ver=20131107);*/
 	-webkit-background-size: 84px;
 	background-size: 84px;
 	background-position: center top;
@@ -149,8 +152,11 @@ p {
 	width: 320px;
 	padding: 8% 0 0;
 	margin: auto;
+	padding-top: 10px;
 }
-
+#login h1{
+	display: none;
+}
 #login_error,
 .login .message {
 	margin-left: 0;
