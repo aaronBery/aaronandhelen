@@ -505,9 +505,9 @@ hgroup {
 h1.site-title {
   color: white;
   text-decoration: none;
-  font-size: 38px;
+  font-size: 30px;
   position: relative;
-  top: -3px;
+  top: 0;
   text-align: center; }
   h1.site-title a {
     color: white;
@@ -572,7 +572,7 @@ h1.site-title {
   color: #f7b2aa;
   margin: 0;
   position: relative;
-  top: 47px;
+  top: 64px;
   width: 935px;
   border: 2px solid #fff; }
 .menu li {

@@ -1,5 +1,5 @@
 var w = window;
-var animeTimerInterval = 5000;
+var animeTimerInterval = 4000;
 var flowersSelector = "img.flowers";
 
 define(["jquery"],
