@@ -8,7 +8,15 @@
  * @subpackage Boho
  * @since Boho
  */
-?><!DOCTYPE html>
+?>
+
+<?php
+//force login
+//auth_redirect();
+
+?>
+
+<!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
 <![endif]-->
@@ -38,13 +46,13 @@
 	<header id="masthead" class="site-header" role="banner">
 		<img src="/wp-content/themes/boho/images/bee.png" id="fairy" width="30px">
 		<!-- <img src="/wp-content/themes/boho/images/bear.png" id="bear"> -->
-		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--left flowers--top">
+		<!-- <img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--left flowers--top">
 		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--left flowers--bottom">
 		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--top">
-		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--bottom">
+		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--bottom"> -->
 		<script>
 		require(['app/animation']);
-		require(['app/flowers']);
+		//require(['app/flowers']);
 		</script>
 		<script>
 		//require(['app/animation']);

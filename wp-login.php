@@ -865,7 +865,20 @@ default:
 		$user_login = ( 'incorrect_password' == $errors->get_error_code() || 'empty_password' == $errors->get_error_code() ) ? esc_attr(wp_unslash($_POST['log'])) : '';
 	$rememberme = ! empty( $_POST['rememberme'] );
 ?>
-
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#key').click(function(){
+			$(this).hide('slow',function(){
+				$('#loginform,#backtoblog,#nav').show('slow',function(){
+					$('#login').css("background-color",'rgba(0,0,0,0.7)');
+				});
+			});
+		});		
+	});
+	
+</script>
+<img src="//2.bp.blogspot.com/-nJ4XRtTjSs0/T9SjSAe6uwI/AAAAAAAAATQ/VW0jvXLPpXI/s1600/golden+key.png" id="key">
 <form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
 	<p>
 		<label for="user_login"><?php _e('Username') ?><br />

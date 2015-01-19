@@ -60,7 +60,7 @@
 				'UserId' => get_current_user_id()
 			)
 		);
-		header("Location: " . get_permalink());
+		echo "<style>form#rsvpEdit{display: none;}</style>";
 	}
 	//leave edit mode
 	echo "<a href='" . get_permalink() . "&edit_rsvp=false'>Back to your selections?</a>";

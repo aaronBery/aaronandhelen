@@ -14,7 +14,10 @@ html {
 
 body {
 	/*background: #f1f1f1;*/
-	background: rgb(247, 178, 170);
+	background-color: rgb(247, 178, 170);
+	background-image: url(/wp-content/themes/boho/images/garden.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
 	min-width: 0;
 	color: #444;
 	font-family: "Open Sans", sans-serif;
@@ -70,7 +73,10 @@ p {
 	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
 	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
 }
-
+#loginform{
+	background: transparent;
+	display: none;
+}
 #loginform p.submit,
 .login-action-lostpassword p.submit {
 	border: none;
@@ -147,12 +153,18 @@ p {
 	overflow: hidden;
 	display: block;
 }
-
+#key{
+	margin: 0 auto;
+	margin-top: 2em;
+	cursor: pointer;
+}
 #login {
 	width: 320px;
 	padding: 8% 0 0;
-	margin: auto;
+	margin: 3em auto;
 	padding-top: 10px;
+	padding-bottom: 10px;
+	background: transparent;
 }
 #login h1{
 	display: none;
@@ -171,10 +183,12 @@ p {
 
 .login #nav {
 	margin: 24px 0 0 0;
+	display: none;
 }
 
 #backtoblog {
 	margin: 16px 0 0 0;
+	display: none;
 }
 
 .login #nav a,

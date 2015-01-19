@@ -8,4 +8,17 @@
 		return $vars;
 	}
 	add_filter( 'query_vars', 'add_query_vars_filter' );
+
+	/**
+	 * Redirect back to homepage and not allow access to 
+	 * WP admin for Subscribers.
+	 */
+	function themeblvd_redirect_admin(){
+		if ( ! current_user_can( 'edit_posts' ) ){
+			wp_redirect( site_url() );
+			exit;		
+		}
+	}
+	add_action( 'admin_init', 'themeblvd_redirect_admin' );
+		
 ?>

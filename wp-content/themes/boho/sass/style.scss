@@ -36,6 +36,9 @@ body{
   font-family: 'Chelsea Market',fantasy;
   font-weight: lighter;
 }
+h1,h2,h3,h4,h5{
+  font-weight: lighter;
+}
 #page{
   width: $containerWidth;
   //max-width: 1000px;

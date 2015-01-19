@@ -1,5 +1,5 @@
 var w = window;
-var animeTimerInterval = 20000;
+var animeTimerInterval = 5000;
 
 define(["jquery"],
     function($){
