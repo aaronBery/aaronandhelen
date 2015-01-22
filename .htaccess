@@ -1,3 +1,5 @@
+# BEGIN WordPress
+#this goes in the directory above root on live
 #RewriteEngine On
 #RewriteBase /
 #RewriteCond %{HTTP_HOST} ^aaronandhelen.(com|local)$
@@ -6,3 +8,19 @@
 #RewriteCond %{REQUEST_FILENAME} !-d 
 #RewriteRule ^(.*)$ /aaronandhelen/$1
 #RewriteRule ^(/)?$ aaronandhelen/index.php [L] 
+#</IfModule>
+
+# END WordPress
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /aaronandhelen/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /aaronandhelen/index.php [L]
+</IfModule>
+
+# END WordPress
