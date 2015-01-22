@@ -1,0 +1,8 @@
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{HTTP_HOST} ^aaronandhelen.(com|local)$
+#RewriteCond %{REQUEST_URI} !^/aaronandhelen/
+#RewriteCond %{REQUEST_FILENAME} !-f 
+#RewriteCond %{REQUEST_FILENAME} !-d 
+#RewriteRule ^(.*)$ /aaronandhelen/$1
+#RewriteRule ^(/)?$ aaronandhelen/index.php [L] 

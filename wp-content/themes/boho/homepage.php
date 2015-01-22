@@ -13,7 +13,15 @@ get_header(); ?>
 			<div class="carousel--arrows carousel--arrow--left" style="background-image:url(<?php echo $imagePath;?>arrows.png)"></div>
 			<div class="carousel--arrows carousel--arrow--right" style="background-image:url(<?php echo $imagePath;?>arrows.png)"></div>
 			<?php
-				$carouselDir = "/var/www/aaronandhelen/wp-content/themes/boho/images/carousel";
+				if(IS_DEV){
+					if(IS_WINDOWS_DEV){
+						$carouselDir = "F:/sites/aaronandhelen/wp-content/themes/boho/images/carousel";	
+					}else{
+						$carouselDir = "/var/www/aaronandhelen/wp-content/themes/boho/images/carousel";
+					}
+				}else{
+					$carouselDir = "/home/aaronaldo99/public_html/aaronandhelen/wp-content/themes/boho/images/carousel";
+				}
 				$carouselArr = scandir($carouselDir);
 				array_splice($carouselArr,0,2);
 				

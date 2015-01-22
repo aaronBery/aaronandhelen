@@ -14,18 +14,29 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', '4ar0nH3l3nWpSit3');
+if($_SERVER["SERVER_NAME"] === "aaronandhelen.local"){
+	define('IS_DEV',true);
+	define('DB_NAME', '4ar0nH3l3nWpSit3');
+	define('DB_USER', 'root');
+	if(PHP_OS === "WINNT"){
+		define('IS_WINDOWS_DEV', true);
+		define('DB_PASSWORD', '123');
+	}else{
+		define('IS_WINDOWS_DEV', false);
+		define('DB_PASSWORD', 'spurs123');
+	}
+	define('DB_HOST', 'localhost');
+}else{
+	define('IS_DEV',false);
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+/*
+Taken out until repo is private
+*/
 
-/** MySQL database username */
-define('DB_USER', 'root');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'spurs123');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
