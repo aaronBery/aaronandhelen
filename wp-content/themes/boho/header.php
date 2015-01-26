@@ -9,13 +9,6 @@
  * @since Boho
  */
 ?>
-
-<?php
-//force login
-//auth_redirect();
-
-?>
-
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -39,8 +32,10 @@
 
 <body <?php body_class(); ?>>
 <div id="mobile">
-	<h1 class="mobile-header">...use your desktop</h1>
-	<img src="/wp-content/themes/boho/images/rock.jpg">
+	<!-- <h1 class="mobile-header">...use your desktop</h1> -->
+	<h1>We didn't build this site for mobiles....sorry xx</h1>
+	<img src="/wp-content/themes/boho/images/computer.png" />
+	<p>If you seriously don't have access to a laptop or desktop let us know and i'll get coding.... :-)</p>
 </div>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">

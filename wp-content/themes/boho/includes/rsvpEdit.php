@@ -44,6 +44,12 @@
 	</fieldset>
 	<input type="submit" value="Submit">
 </form>
+<p>
+	If you are coming with a spouse or family members please login separately and RSVP. For kids if they don't have an email address just let us know in the text field above.
+</p>
+<p>
+	Any other questions drop either of us a line:  <a href="mailto:aaronaldo99@gmail.com">Aaron</a>, <a href="mailto:helen.spence@hotmail.com">Helen</a>.
+</p>
 <?php
 	if(isset($_POST['attending']) && isset($_POST['vegetarian']) && isset($_POST['notes'])){
 		$attending = (strtolower($_POST['attending'])==='yes') ? 1 : 0;

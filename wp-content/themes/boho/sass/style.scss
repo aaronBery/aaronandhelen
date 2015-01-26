@@ -28,12 +28,21 @@ $brown: #895C3C;
 
 #mobile{
   display: none;
+  color: #fff;
+  h1,p{
+    font-family: arial;
+    text-align: center;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
 }
 body{
   //background: url(/wp-content/themes/boho/images/meadow.jpg) repeat;
   background: $coral;
   //font-family: Arial, Helvetica, sans-serif;
-  font-family: 'Chelsea Market',fantasy;
+  font-family: 'Chelsea Market',arial,fantasy;
   font-weight: lighter;
 }
 h1,h2,h3,h4,h5{
@@ -176,6 +185,12 @@ h1.site-title{
 -----------------------------------------------------*/
 #content{
   text-align: center;
+  margin-bottom: 2em;
+}
+body.home{
+  #content{
+    margin-bottom: 0;
+  }
 }
 
 /* carousel styles

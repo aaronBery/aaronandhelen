@@ -29,6 +29,7 @@ get_header(); ?>
 				<p><a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a></p>
 			<?php } ?>
 		</div><!-- #content -->
+		<?php require "includes/bottomNav.php"; ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

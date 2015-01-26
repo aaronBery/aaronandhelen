@@ -466,11 +466,18 @@ th {
 
 /*----------------------------------*/
 #mobile {
-  display: none; }
+  display: none;
+  color: #fff; }
+  #mobile h1, #mobile p {
+    font-family: arial;
+    text-align: center; }
+  #mobile img {
+    width: 100%;
+    height: auto; }
 
 body {
   background: #f7b2aa;
-  font-family: 'Chelsea Market',fantasy;
+  font-family: 'Chelsea Market',arial,fantasy;
   font-weight: lighter; }
 
 h1, h2, h3, h4, h5 {
@@ -601,7 +608,11 @@ h1.site-title {
 /* content
 -----------------------------------------------------*/
 #content {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2em; }
+
+body.home #content {
+  margin-bottom: 0; }
 
 /* carousel styles
 ------------------------------------------------------*/

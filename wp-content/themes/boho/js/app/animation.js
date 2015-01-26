@@ -29,7 +29,7 @@ define(["jquery"],
         }
         function animateGimic() {
             $('#fairy').animate({
-                left: "668px"
+                left: "50%"
                 ,top: "65px"
             }
             ,5000 
