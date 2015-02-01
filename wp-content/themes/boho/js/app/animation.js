@@ -9,15 +9,16 @@ define(["jquery"],
                     display: "block"
                     ,left: "0"
                     ,top: "0"
+                    ,width: ((Math.random()/1)*100)
                 }
             )
-            $('#bear').css(
+            /*$('#bear').css(
                 {
                     display: "block"
                     ,left: "0"
                     ,bottom: "0"
                 }
-            )
+            )*/
             animateGimic();
         }
         function animeController(){

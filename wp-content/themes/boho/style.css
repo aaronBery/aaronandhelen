@@ -712,4 +712,33 @@ input[type="submit"] {
 fieldset {
   border: 1px solid white; }
 
+form textarea {
+  color: #000;
+  min-width: 80%;
+  min-height: 200px; }
+
+.rsvp-group.rsvp-group--holder {
+  border: 1px solid white;
+  padding: 1em; }
+.rsvp-group ul {
+  list-style-type: none; }
+.rsvp-group .rsvp-group-list {
+  overflow: hidden;
+  padding-bottom: 1em;
+  border-bottom: 1px solid  white; }
+.rsvp-group li.rsvp-group.rsvp-group--tab {
+  display: inline-block;
+  cursor: pointer;
+  border-right: 1px solid #fff;
+  padding-right: 1em;
+  margin-right: 1em; }
+  .rsvp-group li.rsvp-group.rsvp-group--tab.current {
+    text-decoration: underline; }
+.rsvp-group .rsvp-group--inner-listing {
+  display: none; }
+  .rsvp-group .rsvp-group--inner-listing.current {
+    display: block; }
+  .rsvp-group .rsvp-group--inner-listing li {
+    padding: 0.5em 0; }
+
 /*# sourceMappingURL=style.css.map */

@@ -20,6 +20,7 @@
 		Vegetarian int NOT NULL,
 		DayGuest int NOT NULL,
 		Notes varchar(255),
+		parentId int DEFAULT 0,
 		PRIMARY KEY (P_Id)
 		)";
 		$wpdb->query($createTableSql);
@@ -39,6 +40,7 @@
 					,'Attending' => 0
 					,'Vegetarian' => 0
 					,'DayGuest' => 3
+					,'parentId' => 0
 					,'Notes' => ''
 				)
 			);

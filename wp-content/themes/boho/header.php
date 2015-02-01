@@ -39,7 +39,7 @@
 </div>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<img src="/wp-content/themes/boho/images/bee.png" id="fairy" width="30px">
+		<img src="/wp-content/themes/boho/images/bee.png" id="fairy">
 		<!-- <img src="/wp-content/themes/boho/images/bear.png" id="bear"> -->
 		<!-- <img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--left flowers--top">
 		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--left flowers--bottom">

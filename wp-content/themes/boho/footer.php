@@ -16,7 +16,7 @@
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
 		</div>--><!-- .site-info -->
 		<p>
-		Aaron and Helen's Big Day, 20th June 2015
+		Aaron and Helen, 20th June 2015
 		</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
