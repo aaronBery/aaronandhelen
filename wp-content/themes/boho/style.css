@@ -725,15 +725,21 @@ form textarea {
 .rsvp-group .rsvp-group-list {
   overflow: hidden;
   padding-bottom: 1em;
-  border-bottom: 1px solid  white; }
+  border-bottom: 1px solid  white;
+  margin-top: 0; }
 .rsvp-group li.rsvp-group.rsvp-group--tab {
   display: inline-block;
   cursor: pointer;
   border-right: 1px solid #fff;
   padding-right: 1em;
-  margin-right: 1em; }
+  padding-bottom: 0.5em;
+  margin-right: 1em;
+  color: #faebd7; }
+  .rsvp-group li.rsvp-group.rsvp-group--tab:last-child {
+    border-right: 0; }
   .rsvp-group li.rsvp-group.rsvp-group--tab.current {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: white; }
 .rsvp-group .rsvp-group--inner-listing {
   display: none; }
   .rsvp-group .rsvp-group--inner-listing.current {

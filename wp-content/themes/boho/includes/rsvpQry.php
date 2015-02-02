@@ -31,9 +31,11 @@
 		FROM " . $rsvpTable . " AS r 
 		LEFT JOIN " . $wpdb->prefix . "users AS u 
 		ON r.UserId= u.ID
-		WHERE r.parentId<>0"
+		WHERE r.parentId=" . $current_user->ID
 		,OBJECT
 	);
 	//print_r($checkChild);
 	$hasChildren = (sizeof($checkChild));
+	//print_r($hasChildren);
+	//exit;
 ?>

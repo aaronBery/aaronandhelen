@@ -26,7 +26,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" href="/wp-content/themes/boho/style.css" />
-<script data-main="<?php echo get_template_directory_uri(); ?>/js/main.js" src="<?php echo get_template_directory_uri(); ?>/js/require.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/require.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 <?php wp_head(); ?>
 </head>
 

@@ -5,13 +5,13 @@
 
 		switch($guestType){
 			case 0:
-				$str = "Please arrive at 1600 for the evening entertainment where you will be greeted with a champaigne reception.</strong>";
+				$str = "Please arrive at 1600 for the evening entertainment where you will be greeted with a champaigne reception.";
 			break;
 			case 1:
-				$str = "<strong>Please arrive at 1300 to be seated before the ceremony";
+				$str = "Please arrive at 1300 to be seated before the ceremony";
 			break;
 			default:
-				$str = "<strong>We will provide details on when to arrive shortly!</strong>";
+				$str = "We will provide details on when to arrive shortly!";
 		}
 
 		return $str;
@@ -58,8 +58,13 @@
 		}
 		
 	}
+	if(!$hasChildren){
+		$tabList = "";//no need to show this
+	}else{
+		$tabList = '<ul class="rsvp-group rsvp-group-list">' . $tabList . '</ul>';
+	}
 
-	echo $h3 . '<div class="rsvp-group rsvp-group--holder"><ul class="rsvp-group rsvp-group-list">' . $tabList . '</ul>' . $usrSettingsListings . '</div>';
+	echo $h3 . '<div class="rsvp-group rsvp-group--holder">' . $tabList . $usrSettingsListings . '</div>';
 
 	if(current_user_can('create_users')){//only admins can create users
 		echo "</br><a href='" . get_permalink() . "&edit_is_day_guest=true'>Only admins can use this link to edit day guests</a>";
