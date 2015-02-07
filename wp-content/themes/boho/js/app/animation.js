@@ -9,7 +9,8 @@ define(["jquery"],
                     display: "block"
                     ,left: "0"
                     ,top: "0"
-                    ,width: ((Math.random()/1)*100)
+                    //,width: ((Math.random()/1)*100)
+                    ,width: "25px"
                 }
             )
             /*$('#bear').css(
