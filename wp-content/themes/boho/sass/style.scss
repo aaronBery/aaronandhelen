@@ -15,8 +15,9 @@ $lightGreen: #c4e0be;
 $purple: rgb(85, 26, 139);
 $containerWidth: 940px;
 //$coral: #FFB894;
-$coral: rgb(247, 178, 170);
+//$coral: rgb(247, 178, 170);
 //$coral: #D56446;
+$coral: #fbb89f;
 $offWhite: #faebd7;
 $brown: #895C3C;
 /*
@@ -182,6 +183,9 @@ h1.site-title{
 #site-navigation {
   width: 100%;
   bottom: 0;
+  .children{
+    display: none;
+  }
 }
 /* content
 -----------------------------------------------------*/
@@ -194,7 +198,12 @@ body.home{
     margin-bottom: 0;
   }
 }
-
+.alignright{
+  float: right;
+}
+.alignleft{
+  float: left;
+}
 /* carousel styles
 ------------------------------------------------------*/
 .carousel--container{

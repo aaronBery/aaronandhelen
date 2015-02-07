@@ -24,6 +24,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
+		<?php require "includes/bottomNav.php"; ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>

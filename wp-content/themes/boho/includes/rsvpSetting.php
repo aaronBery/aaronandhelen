@@ -36,7 +36,7 @@
 		$usrSettingsListings .=  "<li>Your comments: " . $notesStr . "</li>";
 
 		$usrSettingsListings .=  '<li>' . instructionGen($rsvpSettingObj->DayGuest) . "</li>";
-		$usrSettingsListings .=  "<li><a href='/?page_id=13&edit_rsvp=true'>Edit your settings?</a></li></ul></li>";
+		$usrSettingsListings .=  "<li><a href='/rsvp?edit_rsvp=true'>Edit your settings?</a></li></ul></li>";
 	}
 	
 
@@ -46,7 +46,7 @@
 			$dataNum = $checkChildKey + 1;
 			$subGroupUl = '<ul class="rsvp-group rsvp-group--inner-listing"  data-num="' . $dataNum . '">';
 			$tabList .= '<li class="rsvp-group rsvp-group--tab" data-num="' . $dataNum . '">' . $child->display_name . '</li>';
-			$linkToChildUsr = '<a href="/?page_id=13' . '&childId=' . $child->UserId . '&edit_child=true" title="' . $child->display_name . '">Edit this user</a>';
+			$linkToChildUsr = '<a href="/rsvp?childId=' . $child->UserId . '&edit_child=true" title="' . $child->display_name . '">Edit this user</a>';
 			$attendingStatus = ($child->Attending) ? "Yes" : "No";
 			$vegStatus = ($child->Vegetarian) ? "Yes" : "No";
 			$notes = (strlen($child->Notes)) ? $child->Notes : "None";
@@ -67,7 +67,7 @@
 	echo $h3 . '<div class="rsvp-group rsvp-group--holder">' . $tabList . $usrSettingsListings . '</div>';
 
 	if(current_user_can('create_users')){//only admins can create users
-		echo "</br><a href='" . get_permalink() . "&edit_is_day_guest=true'>Only admins can use this link to edit day guests</a>";
+		echo "</br><a href='" . get_permalink() . "?edit_is_day_guest=true'>Only admins can use this link to edit day guests</a>";
 	}
 ?>
 <script>

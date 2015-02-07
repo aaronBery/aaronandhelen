@@ -42,14 +42,14 @@
 
 		echo $guestTypeStr . "<br />";
 	}
-	echo "<a href='/?page_id=13&edit_rsvp=true'>Edit your settings?</a><br />";
+	echo "<a href='/rsvp?edit_rsvp=true'>Edit your settings?</a><br />";
 
 	
 
 	if(isset($hasChildren) && $hasChildren > 0){
 		$childListing = "";
 		foreach ($checkChild as $checkChildKey=>$child) {
-			$linkToChildUsr = '<a href="/?page_id=13' . '&childId=' . $child->UserId . '&edit_child=true" title="' . $child->display_name . '">Edit this user</a>';
+			$linkToChildUsr = '<a href="/rsvp?childId=' . $child->UserId . '&edit_child=true" title="' . $child->display_name . '">Edit this user</a>';
 			$attendingStatus = ($child->Attending) ? "Yes" : "No";
 			$vegStatus = ($child->Vegetarian) ? "Yes" : "No";
 			$notes = (strlen($child->Notes)) ? $child->Notes : "None";
@@ -60,6 +60,6 @@
 	}
 
 	if(current_user_can('create_users')){//only admins can create users
-		echo "<a href='" . get_permalink() . "&edit_is_day_guest=true'>Edit day guests</a>";
+		echo "<a href='" . get_permalink() . "?edit_is_day_guest=true'>Edit day guests</a>";
 	}
 ?>

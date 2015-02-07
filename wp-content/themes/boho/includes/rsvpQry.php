@@ -1,6 +1,6 @@
 <?php
 	global $wpdb;
-	$currentPage = "?page_id=13&edit_rsvp=true";
+	$currentPage = "/rsvp?edit_rsvp=true";
 	$rsvpTable = $wpdb->prefix . "rsvp";
 	$checkRsvp = $wpdb->get_results(
 		"SELECT 

@@ -26,5 +26,5 @@
 </p>
 <?php
 	//leave edit mode
-	echo "<a href='" . get_permalink() . "&edit_rsvp=false'>Back to your selections?</a>";
+	echo "<a href='" . get_permalink() . "?edit_rsvp=false'>Back to your selections?</a>";
 ?>

@@ -66,6 +66,6 @@
 		//redirect back to page to see updates
 		echo "<style>form#guestStatusForm{display: none;}</style>";
 		echo "<a href='" . get_permalink() . "'>Go back to your details</a><br />";
-		echo "<a href='" . get_permalink() . "&edit_is_day_guest=true'>Go back to guests overview</a>";
+		echo "<a href='" . get_permalink() . "?edit_is_day_guest=true'>Go back to guests overview</a>";
 	}
 ?>
