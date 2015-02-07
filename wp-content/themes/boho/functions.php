@@ -28,5 +28,5 @@
 			exit;		
 		}
 	}
-	add_action( 'admin_init', 'themeblvd_redirect_admin' );
+	//add_action( 'admin_init', 'themeblvd_redirect_admin' );
 ?>
