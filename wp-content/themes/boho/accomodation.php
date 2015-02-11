@@ -3,6 +3,7 @@
 Template Name: Accomodation
  */
 
+
 get_header(); ?>
 
 	<div id="primary" class="site-content">
@@ -33,8 +34,8 @@ get_header(); ?>
 				echo '<div class="tab tab--holder">';
 				foreach ($accordionArr as $accordionKey => $accordionItemId) {
 					$accordionItem = get_page($accordionItemId);
-					$current = ($accordionKey===0) ? " current" : "";
-					echo '<div class="tab tab--item" data-num="' . $accordionKey . '"><h3 data-num="' . $accordionKey .'">' . $accordionItem->post_title . '</h3><div class="tab tab--content' . $current . '" data-num="' . $accordionKey . '">' . $accordionItem->post_content . '</div></div>';
+					//$current = ($accordionKey===0) ? " current" : "";
+					echo '<div class="tab tab--item" data-num="' . $accordionKey . '"><h3 data-num="' . $accordionKey .'">' . $accordionItem->post_title . '</h3><div class="tab tab--content" data-num="' . $accordionKey . '">' . $accordionItem->post_content . '</div></div>';
 				}
 				echo '</div>';
 			?>

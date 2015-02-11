@@ -1,7 +1,7 @@
 define(["jquery"],
     function($){
         $(document).ready(function(){
-            var currentTab = 0;
+            var currentTab = -1;
             function closeAllTabs(){
                 $('.tab--content').each(function(){
                     $(this).removeClass('current');
@@ -18,10 +18,12 @@ define(["jquery"],
                 });
             }
             $('.tab--item h3').click(function(){
-                //console.log($(this).attr('data-num'));
-                currentTab = parseInt($(this).attr('data-num'));
+                var newTab = parseInt($(this).attr('data-num'));
                 closeAllTabs();
-                openTab();
+                if(newTab!==currentTab){
+                    currentTab = newTab;
+                    openTab();
+                }
             });
         });
     }
