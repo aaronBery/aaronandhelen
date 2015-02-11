@@ -611,7 +611,8 @@ h1.site-title {
 -----------------------------------------------------*/
 #content {
   text-align: center;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  overflow: hidden; }
 
 body.home #content {
   margin-bottom: 0; }
