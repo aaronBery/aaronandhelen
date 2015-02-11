@@ -378,6 +378,11 @@ $whiteBorder: 1px solid #fff;
   border-right: $whiteBorder;
   border-bottom: $whiteBorder;
   border-left: $whiteBorder;
+  padding: 1em;
+  h4:not(:first-child){
+    padding-top: 1em;
+    border-top: 1px dashed #fff;
+  }
   &.current{
     display: block;
   }
