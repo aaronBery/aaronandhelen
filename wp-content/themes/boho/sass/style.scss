@@ -358,3 +358,27 @@ form{
     }
   }
 }
+
+/* Accomodation
+-----------------------------------------------------------------------*/
+$whiteBorder: 1px solid #fff;
+.tab--item{
+  h3{
+    border: $whiteBorder;
+    padding: 1em;
+    cursor: pointer;
+    margin: 0;
+  }
+}
+.tab--content{
+  h2{
+    margin: 0;
+  }
+  display: none;
+  border-right: $whiteBorder;
+  border-bottom: $whiteBorder;
+  border-left: $whiteBorder;
+  &.current{
+    display: block;
+  }
+}
