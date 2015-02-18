@@ -47,7 +47,7 @@
 		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--top">
 		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--bottom"> -->
 		<script>
-		require(['app/animation']);
+		require(['app/general','app/animation']);
 		//require(['app/flowers']);
 		</script>
 		<script>
@@ -68,6 +68,8 @@
 			-->
 			<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			<?php wp_nav_menu(); ?>
+			<span class="high-contrast"></span>
+			<span class="normal-contrast"></span>
 		</nav><!-- #site-navigation -->
 
 		<?php if ( get_header_image() ) : ?>

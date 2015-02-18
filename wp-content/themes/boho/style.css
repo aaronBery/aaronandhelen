@@ -479,6 +479,8 @@ body {
   background: #fbb89f;
   font-family: 'Chelsea Market',arial,fantasy;
   font-weight: lighter; }
+  body.high-contrast-mode {
+    background: #cd5b45; }
 
 h1, h2, h3, h4, h5 {
   font-weight: lighter; }
@@ -569,6 +571,11 @@ h1.site-title {
     color: #fbb89f;
     text-decoration: none; }
 
+body.high-contrast-mode .col-layout-3col--1-3, body.high-contrast-mode .col-layout-3col--2-3, body.high-contrast-mode .col-layout-3col--3-3 {
+  color: #cd5b45; }
+  body.high-contrast-mode .col-layout-3col--1-3 a, body.high-contrast-mode .col-layout-3col--2-3 a, body.high-contrast-mode .col-layout-3col--3-3 a {
+    color: #cd5b45; }
+
 .col-layout-3col--1-3 {
   margin-right: 5%; }
 
@@ -601,10 +608,31 @@ h1.site-title {
     color: #fbb89f;
     text-decoration: none; }
 
+body.high-contrast-mode .menu ul {
+  color: #cd5b45; }
+body.high-contrast-mode .menu li {
+  color: #cd5b45; }
+  body.high-contrast-mode .menu li.current_page_item {
+    color: #cd5b45; }
+  body.high-contrast-mode .menu li a {
+    color: #cd5b45; }
+
 #site-navigation {
   width: 100%;
   bottom: 0; }
   #site-navigation .children {
+    display: none; }
+  #site-navigation .high-contrast, #site-navigation .normal-contrast {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+  #site-navigation .high-contrast {
+    background: #cd5b45; }
+  #site-navigation .normal-contrast {
+    background: #fbb89f;
     display: none; }
 
 /* content

@@ -18,6 +18,7 @@ $containerWidth: 940px;
 //$coral: rgb(247, 178, 170);
 //$coral: #D56446;
 $coral: #fbb89f;
+$darkCoral: #cd5b45;
 $offWhite: #faebd7;
 $brown: #895C3C;
 /*
@@ -47,6 +48,9 @@ body{
   //font-family: Arial, Helvetica, sans-serif;
   font-family: 'Chelsea Market',arial,fantasy;
   font-weight: lighter;
+  &.high-contrast-mode{
+    background: $darkCoral;
+  }
 }
 h1,h2,h3,h4,h5{
   font-weight: lighter;
@@ -141,6 +145,14 @@ h1.site-title{
     text-decoration: none;
   }
 }
+body.high-contrast-mode{
+  .col-layout-3col--1-3,.col-layout-3col--2-3,.col-layout-3col--3-3{
+    color: $darkCoral;
+    a{
+      color: $darkCoral;
+    }
+  }
+}
 .col-layout-3col--1-3{
   margin-right: 5%;
 }
@@ -180,10 +192,41 @@ h1.site-title{
     }
   }
 }
+body.high-contrast-mode{
+  .menu{
+    ul{
+      color: $darkCoral;
+    }
+    li{
+      color: $darkCoral;
+      &.current_page_item{
+        color: $darkCoral;
+      }
+      a{
+        color: $darkCoral;
+      }
+    }
+  }
+}
 #site-navigation {
   width: 100%;
   bottom: 0;
   .children{
+    display: none;
+  }
+  .high-contrast,.normal-contrast{
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .high-contrast{
+    background: $darkCoral;
+  }
+  .normal-contrast{
+    background: $coral;
     display: none;
   }
 }
