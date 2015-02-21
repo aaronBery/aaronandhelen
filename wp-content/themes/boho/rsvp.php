@@ -34,6 +34,12 @@ get_header(); ?>
 					<p><a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a></p>
 				<?php 
 				}
+				if (have_posts()){
+					while ( have_posts() ) {
+						the_post();
+						the_content();
+					}
+				}
 				?>
 		</div><!-- #content -->
 		<?php require "includes/bottomNav.php"; ?>

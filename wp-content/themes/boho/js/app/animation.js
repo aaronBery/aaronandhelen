@@ -1,5 +1,5 @@
 var w = window;
-var animeTimerInterval = 5000;
+var animeTimerInterval = 10000;
 
 define(["jquery"],
     function($){
@@ -42,7 +42,7 @@ define(["jquery"],
             });
         }
         $(document).ready(function(){
-            showGimic();
+            w.setTimeout(function(){showGimic();},animeTimerInterval/2);
         });
     }
 );

@@ -36,7 +36,7 @@
 		$usrSettingsListings .=  "<li>Your comments: " . $notesStr . "</li>";
 
 		$usrSettingsListings .=  '<li>' . instructionGen($rsvpSettingObj->DayGuest) . "</li>";
-		$usrSettingsListings .=  "<li><a href='/rsvp?edit_rsvp=true'>Edit your settings?</a></li></ul></li>";
+		$usrSettingsListings .=  "<li><a href='/rsvp?edit_rsvp=true' class='fa fa-pencil-square-o'>Edit your settings?</a></li></ul></li>";
 	}
 	
 
@@ -46,7 +46,7 @@
 			$dataNum = $checkChildKey + 1;
 			$subGroupUl = '<ul class="rsvp-group rsvp-group--inner-listing"  data-num="' . $dataNum . '">';
 			$tabList .= '<li class="rsvp-group rsvp-group--tab" data-num="' . $dataNum . '">' . $child->display_name . '</li>';
-			$linkToChildUsr = '<a href="/rsvp?childId=' . $child->UserId . '&edit_child=true" title="' . $child->display_name . '">Edit this user</a>';
+			$linkToChildUsr = '<a href="/rsvp?childId=' . $child->UserId . '&edit_child=true" title="' . $child->display_name . '" class="fa fa-pencil-square-o">Edit this user</a>';
 			$attendingStatus = ($child->Attending) ? "Yes" : "No";
 			$vegStatus = ($child->Vegetarian) ? "Yes" : "No";
 			$notes = (strlen($child->Notes)) ? $child->Notes : "None";

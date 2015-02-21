@@ -13,9 +13,7 @@ html {
 }
 
 body {
-	/*background: #f1f1f1;*/
-	background-color: rgb(247, 178, 170);
-	background-image: url(/wp-content/themes/boho/images/garden.jpg);
+	background: #fbb89f;
 	background-position: center;
 	background-repeat: no-repeat;
 	min-width: 0;
@@ -73,10 +71,10 @@ p {
 	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
 	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
 }
-#loginform{
+/*#loginform{
 	background: transparent;
 	display: none;
-}
+}*/
 #loginform p.submit,
 .login-action-lostpassword p.submit {
 	border: none;
@@ -286,4 +284,11 @@ body.interim-login {
 		font: normal 21px/1 'dashicons';
 		margin: -3px 0 0 -4px;
 	}
+}
+.wp-core-ui .button-primary{
+	background-color: #cd5b45;
+	border-color: #ccc;
+}
+.wp-core-ui .button-primary:hover{
+	background-color: #fbb89f;
 }

@@ -480,7 +480,7 @@ body {
   font-family: 'Chelsea Market',arial,fantasy;
   font-weight: lighter; }
   body.high-contrast-mode {
-    background: #cd5b45; }
+    background: #FE6F5E; }
 
 h1, h2, h3, h4, h5 {
   font-weight: lighter; }
@@ -504,6 +504,32 @@ h1, h2, h3, h4, h5 {
 
 header {
   color: white; }
+
+.high-contrast.fa.fa-eye {
+  height: 33px;
+  width: 36px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -31px;
+  font-size: 2rem;
+  padding-left: 0.3rem;
+  background: #FE6F5E;
+  color: white;
+  display: block; }
+
+.normal-contrast.fa.fa-eye-slash {
+  height: 33px;
+  width: 36px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -31px;
+  font-size: 2rem;
+  padding-left: 0.3rem;
+  background: #fbb89f;
+  display: none;
+  color: #895C3C; }
 
 #masthead {
   height: 172px;
@@ -530,10 +556,12 @@ h1.site-title {
   top: 14px; }
 
 .site-header--date {
-  left: 210px; }
+  left: 182px;
+  font-size: 1.3rem; }
 
 .site-header--location {
-  right: 204px; }
+  right: 166px;
+  font-size: 1.3rem; }
 
 .header-frame {
   position: absolute;
@@ -541,7 +569,7 @@ h1.site-title {
 
 .logo-line {
   position: absolute;
-  width: 200px;
+  width: 150px;
   height: 3px;
   background: white;
   top: 23px; }
@@ -572,9 +600,9 @@ h1.site-title {
     text-decoration: none; }
 
 body.high-contrast-mode .col-layout-3col--1-3, body.high-contrast-mode .col-layout-3col--2-3, body.high-contrast-mode .col-layout-3col--3-3 {
-  color: #cd5b45; }
+  color: #FE6F5E; }
   body.high-contrast-mode .col-layout-3col--1-3 a, body.high-contrast-mode .col-layout-3col--2-3 a, body.high-contrast-mode .col-layout-3col--3-3 a {
-    color: #cd5b45; }
+    color: #FE6F5E; }
 
 .col-layout-3col--1-3 {
   margin-right: 5%; }
@@ -609,30 +637,18 @@ body.high-contrast-mode .col-layout-3col--1-3, body.high-contrast-mode .col-layo
     text-decoration: none; }
 
 body.high-contrast-mode .menu ul {
-  color: #cd5b45; }
+  color: #FE6F5E; }
 body.high-contrast-mode .menu li {
-  color: #cd5b45; }
+  color: #FE6F5E; }
   body.high-contrast-mode .menu li.current_page_item {
-    color: #cd5b45; }
+    color: #FE6F5E; }
   body.high-contrast-mode .menu li a {
-    color: #cd5b45; }
+    color: #FE6F5E; }
 
 #site-navigation {
   width: 100%;
   bottom: 0; }
   #site-navigation .children {
-    display: none; }
-  #site-navigation .high-contrast, #site-navigation .normal-contrast {
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 10px; }
-  #site-navigation .high-contrast {
-    background: #cd5b45; }
-  #site-navigation .normal-contrast {
-    background: #fbb89f;
     display: none; }
 
 /* content
@@ -783,6 +799,15 @@ form textarea {
     display: block; }
   .rsvp-group .rsvp-group--inner-listing li {
     padding: 0.5em 0; }
+
+/* fontella stuff
+----------------------------------------------------------------------*/
+a.fa.fa-pencil-square-o {
+  text-decoration: none; }
+
+a.fa.fa-pencil-square-o::before {
+  padding-right: 0.5rem;
+  text-decoration: none !important; }
 
 /* Accomodation
 -----------------------------------------------------------------------*/

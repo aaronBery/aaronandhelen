@@ -26,6 +26,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" href="/wp-content/themes/boho/style.css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="<?php echo get_template_directory_uri(); ?>/js/require.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 <?php wp_head(); ?>
@@ -40,6 +41,8 @@
 </div>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
+		<span class="high-contrast fa fa-eye"></span>
+		<span class="normal-contrast fa fa-eye-slash"></span>
 		<img src="/wp-content/themes/boho/images/bee.png" id="fairy">
 		<!-- <img src="/wp-content/themes/boho/images/bear.png" id="bear"> -->
 		<!-- <img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--left flowers--top">
@@ -47,7 +50,7 @@
 		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--top">
 		<img src="/wp-content/themes/boho/images/flowers30.png" class="flowers flowers--right flowers--bottom"> -->
 		<script>
-		require(['app/general','app/animation']);
+		require(['app/general'/*,'app/animation'*/]);
 		//require(['app/flowers']);
 		</script>
 		<script>
@@ -68,8 +71,6 @@
 			-->
 			<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			<?php wp_nav_menu(); ?>
-			<span class="high-contrast"></span>
-			<span class="normal-contrast"></span>
 		</nav><!-- #site-navigation -->
 
 		<?php if ( get_header_image() ) : ?>

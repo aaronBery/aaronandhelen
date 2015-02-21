@@ -18,7 +18,7 @@ $containerWidth: 940px;
 //$coral: rgb(247, 178, 170);
 //$coral: #D56446;
 $coral: #fbb89f;
-$darkCoral: #cd5b45;
+$darkCoral: #FE6F5E;
 $offWhite: #faebd7;
 $brown: #895C3C;
 /*
@@ -77,6 +77,28 @@ h1,h2,h3,h4,h5{
 header{
   color: white;
 }
+@mixin contrast{
+    height: 33px;
+    width: 36px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -31px;
+    font-size: 2rem;
+    padding-left: 0.3rem;
+}
+.high-contrast.fa.fa-eye{
+  @include contrast;
+  background: $darkCoral;
+  color: white;
+  display: block;
+}
+.normal-contrast.fa.fa-eye-slash{
+  @include contrast;
+  background: $coral;
+  display: none;
+  color: $brown;
+}
 #masthead {
   height: 172px;
   position: relative;
@@ -103,10 +125,12 @@ h1.site-title{
   top: 14px;
 }
 .site-header--date{
-  left: 210px;
+  left: 182px;
+  font-size: 1.3rem;
 }
 .site-header--location{
-  right: 204px;
+  right: 166px;
+  font-size: 1.3rem;
 }
 .header-frame{
   position: absolute;
@@ -114,7 +138,7 @@ h1.site-title{
 }
 .logo-line{
   position: absolute;
-  width: 200px;
+  width: 150px;
   height: 3px;
   background: white;
   top: 23px;
@@ -212,21 +236,6 @@ body.high-contrast-mode{
   width: 100%;
   bottom: 0;
   .children{
-    display: none;
-  }
-  .high-contrast,.normal-contrast{
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
-  .high-contrast{
-    background: $darkCoral;
-  }
-  .normal-contrast{
-    background: $coral;
     display: none;
   }
 }
@@ -401,7 +410,15 @@ form{
     }
   }
 }
-
+/* fontella stuff
+----------------------------------------------------------------------*/
+a.fa.fa-pencil-square-o{
+  text-decoration: none;
+}
+a.fa.fa-pencil-square-o::before {
+  padding-right: 0.5rem;
+  text-decoration: none!important;
+}
 /* Accomodation
 -----------------------------------------------------------------------*/
 $whiteBorder: 1px solid #fff;

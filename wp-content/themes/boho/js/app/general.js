@@ -4,9 +4,9 @@ define(["jquery"],
 
     	}
 
-    	$('.high-contrast,.normal-contrast').each(function(){
+    	/*$('.high-contrast,.normal-contrast').each(function(){
     		$('.menu ul').append($(this));
-    	});
+    	});*/
 
     	function addMode(show,hide){
 			if(show==='.high-contrast'){
