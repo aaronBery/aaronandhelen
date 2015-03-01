@@ -1,7 +1,15 @@
 define(["jquery"],
     function($) {
-    	if(typeof document.cookie.highcontrast!=='undefined' && document.cookie.highcontrast==="true"){
-
+        var domain = "aaronandhelen.com";
+        if(document.URL.indexOf('local') > -1){
+            domain = "aaronandhelen.local";
+        }
+    	var prefs = '';
+    	if(typeof document.cookie!=='undefined'){
+    		prefs = document.cookie;
+    	}
+    	if(prefs.indexOf('highcontrast=true')>-1){
+    		addMode('.high-contrast','.normal-contrast');
     	}
 
     	/*$('.high-contrast,.normal-contrast').each(function(){
@@ -24,10 +32,12 @@ define(["jquery"],
 
     	$('.high-contrast').click(function(){
     		addMode('.high-contrast','.normal-contrast');
+    		document.cookie="highcontrast=true;domain=" + domain;
     	});
 
     	$('.normal-contrast').click(function(){
     		addMode('.normal-contrast','.high-contrast');
+    		document.cookie="highcontrast=false;domain=" + domain;
     	});
    }
 );

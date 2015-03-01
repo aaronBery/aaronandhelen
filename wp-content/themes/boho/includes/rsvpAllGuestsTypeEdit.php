@@ -11,7 +11,7 @@
 		,r.Notes as Notes
 		,u.display_name as display_name
 		FROM " . $rsvpTable . " AS r 
-		LEFT JOIN wp_users AS u ON r.UserId = u.ID
+		INNER JOIN wp_users AS u ON r.UserId = u.ID
 		ORDER BY r.DayGuest"
 		,OBJECT
 	);

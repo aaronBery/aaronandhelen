@@ -35,7 +35,7 @@ define(["jquery"],
             });
             $('.carousel--arrow--right').click(function(){
                 currentSlide++;
-                if(currentSlide >= SLIDE_COUNT -1){
+                if(currentSlide >= SLIDE_COUNT){
                     currentSlide = 0;
                 }
                 scroll(currentSlide);
