@@ -253,6 +253,7 @@ body.home{
 }
 .alignright{
   float: right;
+  margin-left: 1em;
 }
 .alignleft{
   float: left;
@@ -291,7 +292,7 @@ body.home{
   height: 70px;
   position: absolute;
   top: 42%;
-  display: none;
+  //display: none;
   &:hover{
     cursor: pointer;
   }

@@ -13,14 +13,19 @@ get_header(); ?>
 		<div id="content" role="main">
 
 			<article id="post-0" class="post error404 no-results not-found">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentytwelve' ); ?></h1>
-				</header>
+
+				<!-- <header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'Well this is embarrassing...', 'twentytwelve' ); ?></h1>
+				</header> -->
 
 				<div class="entry-content">
-					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'twentytwelve' ); ?></p>
+					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for, try searching below', 'twentytwelve' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
+				<p>&nbsp;</p>
+				<iframe src="http://notfound-static.fwebservices.be/404/index.html?&amp;key=60641d584920e67934440378a01919d3" width="100%" height="650" frameborder="0"></iframe>
+
+				
 			</article><!-- #post-0 -->
 
 		</div><!-- #content -->

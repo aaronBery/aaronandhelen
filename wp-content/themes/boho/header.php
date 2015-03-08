@@ -35,9 +35,9 @@
 <body <?php body_class(); ?>>
 <div id="mobile">
 	<!-- <h1 class="mobile-header">...use your desktop</h1> -->
-	<h1>We didn't build this site for mobiles....sorry xx</h1>
+	<h1>Sorry we didn't build this site for mobiles</h1>
 	<img src="/wp-content/themes/boho/images/computer.png" />
-	<p>If you seriously don't have access to a laptop or desktop let us know and i'll get coding.... :-)</p>
+	<p>If you don't have access to a laptop or desktop let us know</p>
 </div>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">

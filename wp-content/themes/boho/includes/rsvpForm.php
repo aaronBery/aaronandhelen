@@ -18,13 +18,13 @@
 </form>
 <?php if($hasChildren){ ?>
 <p>
-	If you are coming with a partner or family members please fill in their RSVP too!
+	If you are coming with a partner or family members you can fill in their RSVP too
 </p>
 <?php } ;?>
 <p>
-	Any other questions drop either of us a line:  <a href="mailto:aaronaldo99@gmail.com">Aaron</a>, <a href="mailto:helen.spence@hotmail.com">Helen</a>.
+	Any other questions drop either of us a line:  <a href="mailto:aaronaldo99@gmail.com">aaronaldo99@gmail.com</a>, <a href="mailto:helen.spence@hotmail.com">helen.spence@hotmail.com</a>.
 </p>
 <?php
 	//leave edit mode
-	echo "<a href='" . get_permalink() . "?edit_rsvp=false'>Back to your selections?</a>";
+	echo "<a href='" . get_permalink() . "?edit_rsvp=false'>Back to your selections</a>";
 ?>

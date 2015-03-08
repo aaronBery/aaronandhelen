@@ -5,12 +5,12 @@ define(["jquery"],
     function($,w) {
         var currentSlide = 0
 
-        $('img.carousel--element,.carousel--arrows').hover(function(){
+        /*$('img.carousel--element,.carousel--arrows').hover(function(){
             $('.carousel--arrows').show();
         });
         $('img.carousel--element').mouseout(function(){
             $('.carousel--arrows').hide();
-        });
+        });*/
 
     	function scroll(newSlide){
             currentSlide = newSlide;
