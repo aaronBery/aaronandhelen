@@ -12,6 +12,7 @@
 
 		$vars[] = "edit_rsvp";
 		$vars[] .= "edit_is_day_guest";
+		$vars[] .= "edit_guest_relationship";
 		$vars[] .= "edit_child";
 		$vars[] .= "childId";
 		return $vars;

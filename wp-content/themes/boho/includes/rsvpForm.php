@@ -11,18 +11,18 @@
 		<input type="radio" value="No" name="vegetarian"<?php echo $vegNoCheckedStr; ?>>No
 	</fieldset>
 	<fieldset>
-		<legend>Anything else we should know e.g. Allergies...: </legend>
+		<legend>Anything else we should know e.g. Veggie, allergies etc.</legend>
 		<textarea name="notes" form="rsvpEdit"><?php echo $notes; ?></textarea>
 	</fieldset>
 	<input type="submit" value="Submit">
 </form>
 <?php if($hasChildren){ ?>
 <p>
-	If you are coming with a partner or family members you can fill in their RSVP too
+	If you are coming with a partner or family, you can fill in their RSVP too
 </p>
 <?php } ;?>
 <p>
-	Any other questions drop either of us a line:  <a href="mailto:aaronaldo99@gmail.com">aaronaldo99@gmail.com</a>, <a href="mailto:helen.spence@hotmail.com">helen.spence@hotmail.com</a>.
+	If you have any other questions, drop us a line on 0208 767 4258 or email either of us on <a href="mailto:aaronaldo99@gmail.com">aaronaldo99@gmail.com</a>, <a href="mailto:helen.spence@hotmail.com">helen.spence@hotmail.com</a>.
 </p>
 <?php
 	//leave edit mode

@@ -25,6 +25,9 @@ get_header(); ?>
 						require "includes/rsvpEdit.php";
 					}elseif(strcasecmp(get_query_var('edit_is_day_guest','false'),'true') === 0){
 						require "includes/rsvpAllGuestsTypeEdit.php";
+					}
+					elseif(strcasecmp(get_query_var('edit_guest_relationship','false'),'true') === 0){
+						require "includes/rsvpAllGuestsRelationships.php";
 					}else{
 						require "includes/rsvpSetting.php";
 					}
