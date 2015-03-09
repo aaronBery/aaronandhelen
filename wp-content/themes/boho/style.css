@@ -774,7 +774,8 @@ form textarea {
   border: 1px solid white;
   padding: 1em; }
 .rsvp-group ul {
-  list-style-type: none; }
+  list-style-type: none;
+  padding-left: 0; }
 .rsvp-group .rsvp-group-list {
   overflow: hidden;
   padding-bottom: 1em;
