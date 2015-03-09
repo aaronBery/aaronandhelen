@@ -59,13 +59,12 @@
 						'UserId' => $rsvpSettingObj->UserId
 					)
 				);
-				echo $_POST[$rsvpSettingObj->UserId];
 			}
 			
 		}
 		//redirect back to page to see updates
-		echo "<style>form#guestStatusForm{display: none;}</style>";
-		echo "<a href='" . get_permalink() . "'>Go back to your details</a><br />";
+		echo "<style>form#guestRelationshipForm{display: none;}</style>";
+		echo "<a href='" . get_permalink() . "' class='fa fa-pencil-square-o'>Go back to your details</a><br />";
 		echo "<a href='" . get_permalink() . "?edit_is_day_guest=true' class='fa fa-pencil-square-o'>Go back to guests overview</a>";
 	}
 ?>

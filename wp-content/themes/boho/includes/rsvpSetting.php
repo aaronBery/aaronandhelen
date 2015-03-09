@@ -67,7 +67,9 @@
 	echo $h3 . '<div class="rsvp-group rsvp-group--holder">' . $tabList . $usrSettingsListings . '</div>';
 
 	if(current_user_can('create_users')){//only admins can create users
-		echo "</br><a href='" . get_permalink() . "?edit_is_day_guest=true'>Only admins can use this link to edit day guests</a>";
+		echo "<h4>Only admins can use these links</h4>";
+		echo "<br /><a href='" . get_permalink() . "?edit_is_day_guest=true'>Edit guests types</a>";
+		echo '<br /><a href="//aaronandhelen.local/rsvp/?edit_guest_relationship=true">Edit Family Connections<a>';
 	}
 ?>
 <script>
