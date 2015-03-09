@@ -369,6 +369,10 @@ form{
   }
 }
 .rsvp-group{
+  &.rsvp-group--tab:empty{
+    border: 0!important;
+    padding: 0!important;
+  }
   &.rsvp-group--holder{
     border: 1px solid white;
     padding: 1em;
@@ -389,12 +393,13 @@ form{
       display: inline-block;
       cursor: pointer;
       border-left: 1px solid #fff;
-      padding-right: 1em;
+      padding-left: 1em;
       padding-bottom: 0.5em;
       margin-right: 1em;
       color: $offWhite;
       &:first-child{
         border-left: 0;
+        padding-left: 0;
       }
       &.current{
         text-decoration: underline;

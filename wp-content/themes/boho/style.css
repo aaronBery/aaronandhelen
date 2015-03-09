@@ -770,6 +770,9 @@ form textarea {
   min-width: 80%;
   min-height: 200px; }
 
+.rsvp-group.rsvp-group--tab:empty {
+  border: 0 !important;
+  padding: 0 !important; }
 .rsvp-group.rsvp-group--holder {
   border: 1px solid white;
   padding: 1em; }
@@ -785,12 +788,13 @@ form textarea {
   display: inline-block;
   cursor: pointer;
   border-left: 1px solid #fff;
-  padding-right: 1em;
+  padding-left: 1em;
   padding-bottom: 0.5em;
   margin-right: 1em;
   color: #faebd7; }
   .rsvp-group li.rsvp-group.rsvp-group--tab:first-child {
-    border-left: 0; }
+    border-left: 0;
+    padding-left: 0; }
   .rsvp-group li.rsvp-group.rsvp-group--tab.current {
     text-decoration: underline;
     color: white; }
