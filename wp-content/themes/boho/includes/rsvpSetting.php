@@ -69,7 +69,7 @@
 	if(current_user_can('create_users')){//only admins can create users
 		echo "<h4>Only admins can use these links</h4>";
 		echo "<br /><a href='" . get_permalink() . "?edit_is_day_guest=true'>Edit guests types</a>";
-		echo '<br /><a href="//aaronandhelen.local/rsvp/?edit_guest_relationship=true">Edit Family Connections<a>';
+		echo '<br /><a href="/rsvp/?edit_guest_relationship=true">Edit Family Connections<a>';
 	}
 ?>
 <script>
