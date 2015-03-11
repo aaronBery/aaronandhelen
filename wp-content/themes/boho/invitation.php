@@ -8,7 +8,7 @@ Template Name: Invite
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Aaron & Helen's Wedding</title>
+        <title>Helen's & Aaron Wedding</title>
     </head>
     <body style="color:#000; font-size: 0.8em; font-family: arial; margin-top: 0">
 <?php
@@ -87,7 +87,7 @@ Template Name: Invite
         </tr>
         <tr>
             <td width="300"  style="width: 300px" align="center" valign="top">
-                <h1 style="color: #000; margin-top: 0; font-weight: normal">Aaron & Helen</h1>
+                <h1 style="color: #000; margin-top: 0; font-weight: normal">Helen &amp; Aaron</h1>
 
                 <p style="color: #000; line-height: 1.3">
                     We're getting married!

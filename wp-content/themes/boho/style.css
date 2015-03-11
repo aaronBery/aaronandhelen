@@ -476,7 +476,7 @@ th {
     height: auto; }
 
 body {
-  background: #fbb89f;
+  background: #ffa584;
   font-family: 'Chelsea Market',arial,fantasy;
   font-weight: lighter; }
   body.high-contrast-mode {
@@ -527,7 +527,7 @@ header {
   top: -31px;
   font-size: 2rem;
   padding-left: 0.3rem;
-  background: #fbb89f;
+  background: #ffa584;
   display: none;
   color: #895C3C; }
 
@@ -592,11 +592,11 @@ h1.site-title {
   float: left;
   width: 30%;
   background: white;
-  color: #fbb89f;
+  color: #ffa584;
   text-align: center;
   padding: 0.5em 0; }
   .col-layout-3col--1-3 a, .col-layout-3col--2-3 a, .col-layout-3col--3-3 a {
-    color: #fbb89f;
+    color: #ffa584;
     text-decoration: none; }
 
 body.high-contrast-mode .col-layout-3col--1-3, body.high-contrast-mode .col-layout-3col--2-3, body.high-contrast-mode .col-layout-3col--3-3 {
@@ -614,7 +614,7 @@ body.high-contrast-mode .col-layout-3col--1-3, body.high-contrast-mode .col-layo
   background: white;
   overflow: hidden;
   padding-left: 0;
-  color: #fbb89f;
+  color: #ffa584;
   margin: 0;
   position: relative;
   top: 64px;
@@ -626,14 +626,14 @@ body.high-contrast-mode .col-layout-3col--1-3, body.high-contrast-mode .col-layo
   border-right: 1px solid #fff;
   padding: 3px 3em; }
   .menu li.current_page_item {
-    background: #fbb89f;
+    background: #ffa584;
     color: #895C3C; }
     .menu li.current_page_item a {
       color: #895C3C; }
   .menu li:last-child {
     border-right: 0; }
   .menu li a {
-    color: #fbb89f;
+    color: #ffa584;
     text-decoration: none; }
 
 body.high-contrast-mode .menu ul {

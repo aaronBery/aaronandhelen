@@ -28,6 +28,8 @@ get_header(); ?>
 					}
 					elseif(strcasecmp(get_query_var('edit_guest_relationship','false'),'true') === 0){
 						require "includes/rsvpAllGuestsRelationships.php";
+					}elseif(strcasecmp(get_query_var('show_responses','false'),'true') === 0){
+						require "includes/rsvpShowResponses.php";
 					}else{
 						require "includes/rsvpSetting.php";
 					}

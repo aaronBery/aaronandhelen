@@ -70,6 +70,7 @@
 		echo "<h4>Only admins can use these links</h4>";
 		echo "<br /><a href='" . get_permalink() . "?edit_is_day_guest=true'>Edit guests types</a>";
 		echo '<br /><a href="/rsvp/?edit_guest_relationship=true">Edit Family Connections<a>';
+		echo "<br /><a href='" . get_permalink() . "?show_responses=true' class='fa fa-pencil-square-o'>See RSVP responses</a>";
 	}
 ?>
 <script>

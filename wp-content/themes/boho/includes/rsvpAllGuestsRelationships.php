@@ -66,5 +66,6 @@
 		echo "<style>form#guestRelationshipForm{display: none;}</style>";
 		echo "<a href='" . get_permalink() . "' class='fa fa-pencil-square-o'>Go back to your details</a><br />";
 		echo "<a href='" . get_permalink() . "?edit_is_day_guest=true' class='fa fa-pencil-square-o'>Go back to guests overview</a>";
+		echo "<a href='" . get_permalink() . "?show_responses=true' class='fa fa-pencil-square-o'>See RSVP responses</a>";
 	}
 ?>

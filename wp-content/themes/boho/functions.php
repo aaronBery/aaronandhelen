@@ -14,6 +14,7 @@
 		$vars[] .= "edit_is_day_guest";
 		$vars[] .= "edit_guest_relationship";
 		$vars[] .= "edit_child";
+		$vars[] .= "show_responses";
 		$vars[] .= "childId";
 		return $vars;
 	}
