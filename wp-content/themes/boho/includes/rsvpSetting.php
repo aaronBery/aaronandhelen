@@ -41,7 +41,7 @@
 	
 
 	if(isset($hasChildren) && $hasChildren > 0){
-		$h3 = '<h3>RSVP for you and your group</h3>';
+		$h3 = '<h3>RSVP for you and your group by ' . RSVP_DATE . '</h3>';
 		foreach ($checkChild as $checkChildKey=>$child) {
 			$dataNum = $checkChildKey + 1;
 			$subGroupUl = '<ul class="rsvp-group rsvp-group--inner-listing"  data-num="' . $dataNum . '">';

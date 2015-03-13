@@ -53,9 +53,6 @@
 		require(['app/general'/*,'app/animation'*/]);
 		//require(['app/flowers']);
 		</script>
-		<script>
-		//require(['app/animation']);
-		</script>
 		<div class="logo-line logo-line--leftline"></div>
 		<div class="site-header site-header--date">20.06.2015</div>
 		<hgroup>

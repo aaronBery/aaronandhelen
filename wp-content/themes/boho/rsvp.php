@@ -35,8 +35,8 @@ get_header(); ?>
 					}
 				}else{
 				?>
-					<p>You need to be logged in to RSVP!</p>
-					<p><a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a></p>
+					<p>Please RSVP by the<?php echo RSVP_DATE; ?></p>
+					<p>You will need to <a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">login</a> to complete the process</p>
 				<?php 
 				}
 				if (have_posts()){

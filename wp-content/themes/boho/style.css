@@ -843,4 +843,9 @@ a.fa.fa-pencil-square-o::before {
   background: white;
   color: black; }
 
+/* Page specific
+-----------------------------------------------------------*/
+.page-id-179 p {
+  margin: 2em auto; }
+
 /*# sourceMappingURL=style.css.map */

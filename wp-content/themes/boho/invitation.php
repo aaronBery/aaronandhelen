@@ -108,7 +108,7 @@ Template Name: Invite
                 </p>
 
                 <p style="color: #000; line-height: 1.3">
-                    Please RSVP at <a href="[login_url]" title="RSVP" style="color: #000;font-weight:normal;">aaronandhelen.com/rsvp</a> <br /> where you will also find more information about the day
+                    Please RSVP by the <?php echo RSVP_DATE; ?> at <a href="[login_url]" title="RSVP" style="color: #000;font-weight:normal;">aaronandhelen.com/rsvp</a> <br /> where you will also find more information about the day
                 </p>
 
                 <p style="color: #000; line-height: 1.3">
