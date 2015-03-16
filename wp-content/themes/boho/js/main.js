@@ -4,5 +4,12 @@ requirejs.config({
     ,paths: {
         app: '../app'
         ,jquery: '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min'
+        ,facebox: 'facebox'
+    }
+    ,shim: {
+        'facebox': {
+            deps: ['jquery']
+            //,exports: 'facebox'
+        }
     }
 });
