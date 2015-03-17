@@ -6,7 +6,7 @@
 </style>
 <?php
 	function showAllUsrsResponses(){
-		$tbl = "<table><tr><th>Name</th><th>Day Guest</th><th>Attending</th><th>Vegetarian</th><th>Notes</th></tr>";
+		$tbl = "<table><tr><th>Name</th><th>Day Guest</th><th>Attending</th><th>Vegetarian</th><th>Parking Car</th><th>Notes</th></tr>";
 		global $wpdb;
 		$rsvpTable = $wpdb->prefix . "rsvp";
 		$allUsrs = $wpdb->get_results(
@@ -15,6 +15,7 @@
 			,r.UserId as UserId
 			,r.Attending as Attending
 			,r.Vegetarian as Vegetarian
+			,r.ParkingCar as ParkingCar
 			,r.DayGuest as DayGuest
 			,r.Notes as Notes
 			,u.display_name as display_name
@@ -24,28 +25,56 @@
 			ORDER BY r.DayGuest"
 			,OBJECT
 		);
-		
+		$numOfConfirmed = 0;
+		$numOfConfirmedDay = 0;
+		$numOfConfirmedEvening = 0;
+		$numOfVeggies = 0;
+		$numofParking = 0;
 		foreach ($allUsrs as $key => $value) {
+			$tmpIsComing = $value->Attending;
+			
+			if($tmpIsComing)$numOfConfirmed++;
 			switch($value->DayGuest){
-				case 0: 
+				case 3: 
 					$dayGuestStr = "Not set";
 				break;
 				case 1:
 					$dayGuestStr = "Day";
+					if($tmpIsComing)$numOfConfirmedDay++;
 				break;
-				case 3:
+				case 0:
 					$dayGuestStr = "Evening";
+					if($tmpIsComing)$numOfConfirmedEvening++;
 				break;
 				default:
 					$dayGuestStr = "Not set";
 			}
 			$attendingStr = ($value->Attending) ? "Yes" : "No";
-			$vegStr = ($value->Vegetarian) ? "Yes" : "No";
+			if($value->Vegetarian){
+				$vegStr = "Yes";
+				if($tmpIsComing)$numOfVeggies++;
+			}else{
+				$vegStr = "No";
+			}
+			if($value->ParkingCar){
+				$parkingStr = "Yes";
+				if($tmpIsComing)$numofParking++;
+			}else{
+				$parkingStr = "No";
+			}
 
-			$tbl .= "<tr><td>" . $value->display_name . "</td><td>" . $dayGuestStr . "</td><td>" . $attendingStr . "</td><td>" . $vegStr . "</td><td>" . $value->Notes . "</td></tr>" ;
+			$tbl .= "<tr><td>" . $value->display_name . "</td><td>" . $dayGuestStr . "</td><td>" . $attendingStr . "</td><td>" . $vegStr . "</td><td>" . $parkingStr . "</td><td>" . $value->Notes . "</td></tr>" ;
 		}
 		$tbl .= "</table>";
-		echo $tbl;
+		
+		$statBreakDown = '<h3>Quick Stat breakdown</h3><p>(this assumes only guests that have confirmed their attendence)</p>';
+		$statBreakDown .= 'Number of confirmed guests: ' . $numOfConfirmed . '<br />';
+		$statBreakDown .= 'Number of confirmed day guests: ' . $numOfConfirmedDay . '<br />';
+		$statBreakDown .= 'Number of confirmed evening guests: ' . $numOfConfirmedEvening . '<br />';
+		$statBreakDown .= 'Number of confirmed vegetarians: ' . $numOfVeggies . '<br />';
+		$statBreakDown .= 'Number of confirmed guests driving: ' . $numofParking . '<br />';
+
+		echo $tbl . '<br />' . $statBreakDown;
 	}
 	showAllUsrsResponses();
 ?>

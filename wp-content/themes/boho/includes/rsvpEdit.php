@@ -6,6 +6,7 @@
 				$usrId = $rsvpIt->UserId;
 				$attending = $rsvpIt->Attending;
 				$vegetarian = $rsvpIt->Vegetarian;
+				$parkingCar = $rsvpIt->ParkingCar;
 				$notes = $rsvpIt->Notes;
 			}
 		}else{
@@ -13,6 +14,7 @@
 			$usrId = $rsvpIt->UserId;
 			$attending = $rsvpIt->Attending;
 			$vegetarian = $rsvpIt->Vegetarian;
+			$parkingCar = $rsvpIt->ParkingCar;
 			$notes = $rsvpIt->Notes;
 		}
 		
@@ -23,6 +25,9 @@
 
 	$vegYesCheckedStr = ($vegetarian) ? " checked" : "";
 	$vegNoCheckedStr = ($vegetarian) ? "" : " checked";
+
+	$parkingCarYesCheckedStr = ($parkingCar) ? " checked" : "";
+	$parkingCarNoCheckedStr = ($parkingCar) ? "" : " checked";
 
 	include "rsvpForm.php";
 

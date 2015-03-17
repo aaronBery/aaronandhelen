@@ -11,6 +11,11 @@
 		<input type="radio" value="No" name="vegetarian"<?php echo $vegNoCheckedStr; ?>>No
 	</fieldset>
 	<fieldset>
+		<legend>Are you bringing a car? (only the driver select yes): </legend>
+		<input type="radio" value="Yes" name="parkingcar"<?php echo $parkingCarYesCheckedStr; ?>>Yes
+		<input type="radio" value="No" name="parkingcar"<?php echo $parkingCarNoCheckedStr; ?>>No
+	</fieldset>
+	<fieldset>
 		<legend>Anything else we should know e.g. Veggie, allergies etc.</legend>
 		<textarea name="notes" form="rsvpEdit"><?php echo $notes; ?></textarea>
 	</fieldset>

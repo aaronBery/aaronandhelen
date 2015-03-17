@@ -2,13 +2,14 @@
 <?php
 	function instructionGen($guestType){
 		$str = '';
+		$adviceAlert = '<br/>It is essential to book taxis and accomodation in advance as the area is quite remote';
 
 		switch($guestType){
 			case 0:
-				$str = "Please arrive at 1600 for the evening entertainment where you will be greeted with a champaigne reception.";
+				$str = "The evening entertainment starts at 6.30pm, please feel free to arrive from 6pm." . $adviceAlert;
 			break;
 			case 1:
-				$str = "Please arrive at 1300 to be seated before the ceremony";
+				$str = "Please arrive at 1pm to be seated before the ceremony." . $adviceAlert;
 			break;
 			default:
 				$str = "We will provide details on when to arrive shortly!";
@@ -32,6 +33,9 @@
 		$vegetarianStr = ($rsvpSettingObj->Vegetarian) ? "Yes" : "No";
 		$usrSettingsListings .=  "<li>Vegetarian: " . $vegetarianStr . "</li>";
 
+		$parkingStr = ($rsvpSettingObj->ParkingCar) ? "Yes" : "No";
+		$usrSettingsListings .=  "<li>Parking Car?: " . $parkingStr . "</li>";
+
 		$notesStr = $rsvpSettingObj->Notes;
 		$usrSettingsListings .=  "<li>Your comments: " . $notesStr . "</li>";
 
@@ -49,9 +53,10 @@
 			$linkToChildUsr = '<a href="/rsvp?childId=' . $child->UserId . '&edit_child=true" title="' . $child->display_name . '" class="fa fa-pencil-square-o">Edit this user</a>';
 			$attendingStatus = ($child->Attending) ? "Yes" : "No";
 			$vegStatus = ($child->Vegetarian) ? "Yes" : "No";
+			$parkStatus = ($child->ParkingCar) ? "Yes" : "No";
 			$notes = (strlen($child->Notes)) ? $child->Notes : "None";
 			//$currentClass = ($checkChildKey===0) ? ' class="currentUsr"' : '';
-			$usrSettingsListings .=  $subGroupUl . '<li>Attending: ' . $attendingStatus . '</li><li>Vegetarian: ' . $vegStatus . '</li><li>Your Notes: ' . $notes . '</li>';
+			$usrSettingsListings .=  $subGroupUl . '<li>Attending: ' . $attendingStatus . '</li><li>Vegetarian: ' . $vegStatus . '</li><li>Parking Car?: ' . $parkStatus . '</li><li>Your Notes: ' . $notes . '</li>';
 			$usrSettingsListings .=  '<li>' . instructionGen($child->DayGuest) . "</li>";
 			$usrSettingsListings .=  '<li>' . $linkToChildUsr . '</li>';
 			$usrSettingsListings .= "</ul></li>";

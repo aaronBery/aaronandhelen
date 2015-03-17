@@ -18,6 +18,7 @@
 		UserId int NOT NULL,
 		Attending int NOT NULL,
 		Vegetarian int NOT NULL,
+		ParkingCar int NOT NULL,
 		DayGuest int NOT NULL,
 		Notes varchar(255),
 		parentId int DEFAULT 0,
@@ -39,6 +40,7 @@
 					'UserId' => $user->ID
 					,'Attending' => 0
 					,'Vegetarian' => 0
+					,'ParkingCar' => 0
 					,'DayGuest' => 3
 					,'parentId' => 0
 					,'Notes' => ''
