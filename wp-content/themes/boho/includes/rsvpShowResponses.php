@@ -31,7 +31,7 @@
 					$dayGuestStr = "Not set";
 				break;
 				case 1:
-					$dayGuestStr = "Evening";
+					$dayGuestStr = "Day";
 				break;
 				case 3:
 					$dayGuestStr = "Evening";
