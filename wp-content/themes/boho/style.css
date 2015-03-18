@@ -927,4 +927,11 @@ a.fa.fa-pencil-square-o::before {
   background: black;
   opacity: 0.1; }
 
+/* Tables
+------------------------------------------------------*/
+.page-template-rsvp-php th {
+  height: 3em; }
+.page-template-rsvp-php tr {
+  border: 1px dashed; }
+
 /*# sourceMappingURL=style.css.map */

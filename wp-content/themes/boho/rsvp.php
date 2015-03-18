@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
 Template Name: RSVP
  */
@@ -35,7 +35,7 @@ get_header(); ?>
 					}
 				}else{
 				?>
-					<p>Please RSVP by the<?php echo RSVP_DATE; ?></p>
+					<p>Please RSVP by the <?php echo RSVP_DATE; ?></p>
 					<p>You will need to <a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">login</a> to complete the process</p>
 				<?php 
 				}

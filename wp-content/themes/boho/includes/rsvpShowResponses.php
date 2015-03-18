@@ -6,7 +6,7 @@
 </style>
 <?php
 	function showAllUsrsResponses(){
-		$tbl = "<table><tr><th>Name</th><th>Day Guest</th><th>Attending</th><th>Vegetarian</th><th>Parking Car</th><th>Notes</th></tr>";
+		$tbl = "<table><tr><th>Name</th><th>Day Guest</th><th>Attending</th><th>Vegetarian</th><th>Parking Car</th><th width=300>Notes</th></tr>";
 		global $wpdb;
 		$rsvpTable = $wpdb->prefix . "rsvp";
 		$allUsrs = $wpdb->get_results(
@@ -22,7 +22,7 @@
 			,r.parentId as parentId
 			FROM " . $rsvpTable . " AS r 
 			INNER JOIN wp_users AS u ON r.UserId = u.ID
-			ORDER BY r.DayGuest"
+			ORDER BY u.display_name"
 			,OBJECT
 		);
 		$numOfConfirmed = 0;

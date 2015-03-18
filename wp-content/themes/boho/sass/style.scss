@@ -485,3 +485,13 @@ $whiteBorder: 1px solid #fff;
   background: black;
   opacity: 0.1;
 }
+/* Tables
+------------------------------------------------------*/
+.page-template-rsvp-php{
+  th{
+    height: 3em;
+  }
+  tr{
+    border: 1px dashed;
+  }
+}
