@@ -555,7 +555,8 @@ h1, h2, h3, h4, h5 {
   font-weight: lighter; }
 
 #page {
-  width: 940px;
+  width: 100%;
+  max-width: 940px;
   margin: 0 auto; }
 
 #main {
@@ -603,6 +604,38 @@ header {
 #masthead {
   height: 172px;
   position: relative; }
+  @media screen and (max-width: 600px) {
+    #masthead {
+      display: none; } }
+
+#mobile-header {
+  display: none; }
+  @media screen and (max-width: 600px) {
+    #mobile-header {
+      display: block; } }
+  #mobile-header .hamburger {
+    display: block;
+    cursor: pointer; }
+  #mobile-header .header__close {
+    color: white;
+    display: none; }
+  #mobile-header p {
+    text-align: center; }
+  #mobile-header .children {
+    display: none; }
+  #mobile-header .menu {
+    display: none; }
+    #mobile-header .menu ul {
+      width: 100%;
+      position: static;
+      border: 0; }
+  #mobile-header li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 2em;
+    border-bottom: 1px solid #ffa584; }
 
 hgroup {
   width: 380px;
@@ -667,6 +700,10 @@ h1.site-title {
   .col-layout-3col--1-3 a, .col-layout-3col--2-3 a, .col-layout-3col--3-3 a {
     color: #ffa584;
     text-decoration: none; }
+  @media screen and (max-width: 600px) {
+    .col-layout-3col--1-3, .col-layout-3col--2-3, .col-layout-3col--3-3 {
+      width: 100%;
+      margin-bottom: 1px; } }
 
 body.high-contrast-mode .col-layout-3col--1-3, body.high-contrast-mode .col-layout-3col--2-3, body.high-contrast-mode .col-layout-3col--3-3 {
   color: #FE6F5E; }
@@ -675,9 +712,15 @@ body.high-contrast-mode .col-layout-3col--1-3, body.high-contrast-mode .col-layo
 
 .col-layout-3col--1-3 {
   margin-right: 5%; }
+  @media screen and (max-width: 600px) {
+    .col-layout-3col--1-3 {
+      margin-right: 0; } }
 
 .col-layout-3col--3-3 {
   margin-left: 5%; }
+  @media screen and (max-width: 600px) {
+    .col-layout-3col--3-3 {
+      margin-left: 0; } }
 
 .menu ul {
   background: white;
@@ -719,6 +762,9 @@ body.high-contrast-mode .menu li {
   bottom: 0; }
   #site-navigation .children {
     display: none; }
+  @media screen and (max-width: 600px) {
+    #site-navigation {
+      display: none; } }
 
 /* content
 -----------------------------------------------------*/
@@ -814,18 +860,20 @@ footer {
 
 /* mobile
 --------------------------------------*/
-@media screen and (max-width: 600px) {
-  #mobile {
-    display: block; }
-
-  #page {
-    display: none; }
-
-  .mobile-header {
-    color: white;
-    position: absolute;
-    top: 360px;
-    padding-left: 0.5em; } }
+/* @media screen and (max-width: 600px) {
+    #mobile{
+      display: block;
+    }
+    #page{
+      display: none;
+    }
+    .mobile-header{
+      color: white;
+      position: absolute;
+      top: 360px;
+      padding-left: 0.5em;
+    }
+} */
 /* RSVP
 -----------------------------------------------------*/
 input[type="submit"] {

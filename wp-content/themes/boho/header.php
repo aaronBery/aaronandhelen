@@ -40,6 +40,19 @@
 	<p>If you don't have access to a laptop or desktop let us know</p>
 </div>
 <div id="page" class="hfeed site">
+	<header id="mobile-header">
+			<div class="hamburger">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/mob-nav.png">
+			</div>
+			<div class="mobile-nav">
+				<a class="header__close" href="#">
+            		<img src="<?php echo get_template_directory_uri(); ?>/images/close.png" alt="X">Close
+           		</a>
+				<?php wp_nav_menu(); ?>
+			</div>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Aaron & Helen<?php //bloginfo( 'name' ); ?></a></h1>
+			<p>Bignor Park - 20.06.2015</p>
+	</header>
 	<header id="masthead" class="site-header" role="banner">
 		<span class="high-contrast fa fa-eye"></span>
 		<span class="normal-contrast fa fa-eye-slash"></span>

@@ -52,5 +52,15 @@ define(["jquery","facebox"],
                 e.preventDefault();
             });
         });
+
+
+        $('.hamburger img').click(function(){
+            $('#mobile-header .menu,.header__close').show();
+            $('.hamburger').hide();
+        });
+        $('.header__close').click(function(){
+            $('#mobile-header .menu,.header__close').hide();
+            $('.hamburger').show();
+        });
    }
 );

@@ -59,8 +59,9 @@ h1,h2,h3,h4,h5{
   font-weight: lighter;
 }
 #page{
-  width: $containerWidth;
-  //max-width: 1000px;
+  //width: $containerWidth;
+  width: 100%;
+  max-width: $containerWidth;
   margin: 0 auto;
 }
 #main{
@@ -105,6 +106,45 @@ header{
 #masthead {
   height: 172px;
   position: relative;
+  @media screen and (max-width: 600px){
+    display: none;
+  }
+}
+#mobile-header{
+  display: none;
+  @media screen and (max-width: 600px){
+    display: block;
+  }
+  .hamburger{
+    display: block;
+    cursor: pointer;
+  }
+  .header__close{
+    color: white;
+    display: none;
+  }
+  p{
+    text-align: center;
+  }
+  .children{
+    display: none;
+  }
+  .menu{
+    display: none;
+    ul{
+      width: 100%;
+      position: static;
+      border: 0;
+    }
+  }
+  li{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 2em;
+    border-bottom: 1px solid $coral;
+  }
 }
 hgroup{
   width: 380px;
@@ -171,6 +211,10 @@ h1.site-title{
     color: $coral;
     text-decoration: none;
   }
+  @media screen and (max-width: 600px){
+    width: 100%;
+    margin-bottom: 1px;
+  }
 }
 body.high-contrast-mode{
   .col-layout-3col--1-3,.col-layout-3col--2-3,.col-layout-3col--3-3{
@@ -182,9 +226,16 @@ body.high-contrast-mode{
 }
 .col-layout-3col--1-3{
   margin-right: 5%;
+  @media screen and (max-width: 600px){
+    margin-right: 0;
+  }
 }
 .col-layout-3col--3-3{
   margin-left: 5%;
+  @media screen and (max-width: 600px){
+    margin-left: 0;
+  }
+
 }
 .menu{
   ul{
@@ -239,6 +290,9 @@ body.high-contrast-mode{
   width: 100%;
   bottom: 0;
   .children{
+    display: none;
+  }
+  @media screen and (max-width: 600px){
     display: none;
   }
 }
@@ -342,7 +396,7 @@ footer{
 
 /* mobile
 --------------------------------------*/
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     #mobile{
       display: block;
     }
@@ -355,7 +409,7 @@ footer{
       top: 360px;
       padding-left: 0.5em;
     }
-}
+} */
 /* RSVP
 -----------------------------------------------------*/
 input[type="submit"] {
