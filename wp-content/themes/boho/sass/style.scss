@@ -158,6 +158,9 @@ h1.site-title{
   position: relative;
   top: 0;
   text-align: center;
+  @media screen and (max-width: 600px){
+    margin-top: 0;
+  }
   a{
     color: white;
     text-decoration: none;
@@ -357,10 +360,18 @@ body.home{
 .carousel--arrow--right{
   right: 1em;
   background-position: right center;
+  @media screen and (max-width: 600px){
+    background-position: right top;
+    top: 30%;
+  }
 }
 .carousel--arrow--left{
   left: 1em;
   background-position: left center;
+  @media screen and (max-width: 600px){
+    background-position: right top;
+    top: 30%;
+  }
 }
 #fairy,#bear{
   display: none;

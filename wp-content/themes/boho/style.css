@@ -649,6 +649,9 @@ h1.site-title {
   position: relative;
   top: 0;
   text-align: center; }
+  @media screen and (max-width: 600px) {
+    h1.site-title {
+      margin-top: 0; } }
   h1.site-title a {
     color: white;
     text-decoration: none; }
@@ -823,10 +826,18 @@ body.home #content {
 .carousel--arrow--right {
   right: 1em;
   background-position: right center; }
+  @media screen and (max-width: 600px) {
+    .carousel--arrow--right {
+      background-position: right top;
+      top: 30%; } }
 
 .carousel--arrow--left {
   left: 1em;
   background-position: left center; }
+  @media screen and (max-width: 600px) {
+    .carousel--arrow--left {
+      background-position: right top;
+      top: 30%; } }
 
 #fairy, #bear {
   display: none;
