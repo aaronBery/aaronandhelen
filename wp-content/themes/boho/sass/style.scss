@@ -106,13 +106,13 @@ header{
 #masthead {
   height: 172px;
   position: relative;
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: $containerWidth){
     display: none;
   }
 }
 #mobile-header{
   display: none;
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: $containerWidth){
     display: block;
   }
   .hamburger{
