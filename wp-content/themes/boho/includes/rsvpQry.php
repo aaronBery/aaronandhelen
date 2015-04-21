@@ -16,7 +16,8 @@
 		FROM " . $rsvpTable . " AS r 
 		LEFT JOIN " . $wpdb->prefix . "users AS u 
 		ON r.UserId = u.ID
-		WHERE r.UserId='" . $current_user->ID . "'"
+		WHERE r.UserId='" . $current_user->ID . "'
+		ORDER BY u.display_name"
 		,OBJECT
 	);
 	$checkChild = $wpdb->get_results(
@@ -33,7 +34,8 @@
 		FROM " . $rsvpTable . " AS r 
 		LEFT JOIN " . $wpdb->prefix . "users AS u 
 		ON r.UserId= u.ID
-		WHERE r.parentId=" . $current_user->ID
+		WHERE r.parentId=" . $current_user->ID . " 
+		ORDER BY u.display_name"
 		,OBJECT
 	);
 	//print_r($checkChild);

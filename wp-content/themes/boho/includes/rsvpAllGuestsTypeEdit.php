@@ -12,7 +12,7 @@
 		,u.display_name as display_name
 		FROM " . $rsvpTable . " AS r 
 		INNER JOIN wp_users AS u ON r.UserId = u.ID
-		ORDER BY r.DayGuest"
+		ORDER BY u.display_name"
 		,OBJECT
 	);
 ?>

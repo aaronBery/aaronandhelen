@@ -22,6 +22,8 @@
 		DayGuest int NOT NULL,
 		Notes varchar(255),
 		parentId int DEFAULT 0,
+		IsChild int DEFAULT 0,
+		IsBaby int DEFAULT 0,
 		PRIMARY KEY (P_Id)
 		)";
 		$wpdb->query($createTableSql);
