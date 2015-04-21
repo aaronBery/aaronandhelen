@@ -58,7 +58,9 @@
 			$attendingStr = ($value->Attending) ? "Yes" : "No";
 			if($value->Vegetarian){
 				$vegStr = "Yes";
-				if($tmpIsComing)$numOfVeggies++;
+				if($tmpIsComing && $dayGuestStr==="Day"){
+					$numOfVeggies++;
+				}
 			}else{
 				$vegStr = "No";
 			}
