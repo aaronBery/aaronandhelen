@@ -32,12 +32,16 @@
 		$numOfConfirmedDay = 0;
 		$numOfConfirmedEvening = 0;
 		$numOfVeggies = 0;
+		$numOfBabyVeggies = 0;
+		$numOfChildVeggies = 0;
 		$numofParking = 0;
 		$childNum = 0;
 		$babyNum = 0;
 		foreach ($allUsrs as $key => $value) {
 			$total++;
 			$tmpIsComing = $value->Attending;
+			$tmpIsBaby = $value->isBaby;
+			$tmpIsChild = $value->isChild;
 			
 			if($tmpIsComing)$numOfConfirmed++;
 			switch($value->DayGuest){
@@ -58,8 +62,12 @@
 			$attendingStr = ($value->Attending) ? "Yes" : "No";
 			if($value->Vegetarian){
 				$vegStr = "Yes";
-				if($tmpIsComing && $dayGuestStr==="Day"){
+				if($tmpIsComing && $dayGuestStr==="Day" && $tmpIsBaby==0 && $tmpIsChild==0){
 					$numOfVeggies++;
+				}else if($tmpIsComing && $dayGuestStr==="Day" && $tmpIsBaby==1){
+					$numOfBabyVeggies++;
+				}else if($tmpIsComing && $dayGuestStr==="Day" && $tmpIsChild==1){
+					$numOfChildVeggies++;
 				}
 			}else{
 				$vegStr = "No";
@@ -87,6 +95,8 @@
 		$statBreakDown .= 'Number of adult confirmed day guests: ' . ($numOfConfirmedDay - $childNum - $babyNum) . '<br />';
 		$statBreakDown .= 'Number of confirmed evening guests: ' . $numOfConfirmedEvening . '<br />';
 		$statBreakDown .= 'Number of confirmed vegetarians: ' . $numOfVeggies . '<br />';
+		$statBreakDown .= 'Number of confirmed baby vegetarians: ' . $numOfBabyVeggies . '<br />';
+		$statBreakDown .= 'Number of confirmed child vegetarians: ' . $numOfChildVeggies . '<br />';
 		$statBreakDown .= 'Number of confirmed guests driving: ' . $numofParking . '<br />';
 		$statBreakDown .= 'Number of guests who have not confirmed yes: ' . ($total - $numOfConfirmed) . '<br />';
 		$statBreakDown .= 'Number of children: ' . $childNum . '<br />';
