@@ -17,7 +17,8 @@ Template Name: angular feed
 <div ng-controller="rsvpController">
 	<form name="listingOptions">
 		<input type="text" ng-model="search" />
-		<input type="checkbox" value="reverse" ng-model="reverseOrder">Reverse Order
+		<input type="checkbox" value="reverse" ng-model="reverseNamesOrder">Reverse Names Order
+		<input type="checkbox" value="reverse" ng-click="reverseAttendingOrder">Reverse Attending Order
 	</form>
 	<table>
 		<tr>
@@ -28,9 +29,9 @@ Template Name: angular feed
 			<th>Parking Car</th>
 			<th>Notes</th>
 			<th>Is Child</th>
-			<th>Is Baby</th>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
+			<th>Is Baby</th>
 		</tr>
-		<tr ng-repeat="x in xhrData | filter:search | orderBy:'display_name':reverseOrder">
+		<tr ng-repeat="x in xhrData | filter:search | orderBy:'display_name':reverseNamesOrder">
 			<td>{{ x.display_name }}</td>
 			<td>{{ x.DayGuest }}</td>
 			<td>{{ x.Attending }}</td>
