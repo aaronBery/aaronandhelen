@@ -14,11 +14,13 @@
  * @package WordPress
  */
 
-if($_SERVER["SERVER_NAME"] === "aaronandhelen.local"){
+define('RSVP_DATE','1st May');
+
+if($_SERVER["SERVER_NAME"] == "aaronandhelen.local"){
 	define('IS_DEV',true);
-	define('DB_NAME', '4ar0nH3l3nWpSit3');
+	define('DB_NAME', 'i1134229_wp1');
 	define('DB_USER', 'root');
-	if(PHP_OS === "WINNT"){
+	if(PHP_OS == "WINNT"){
 		define('IS_WINDOWS_DEV', true);
 		define('DB_PASSWORD', '123');
 	}else{
@@ -30,12 +32,16 @@ if($_SERVER["SERVER_NAME"] === "aaronandhelen.local"){
 	define('IS_DEV',false);
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
-/*
-Taken out until repo is private
-*/
+	define('DB_NAME', 'i1134229_wp1');
+
+	/** MySQL database username */
+	define('DB_USER', 'i1134229_wp1');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', '');
 
 	/** MySQL hostname */
-	define('DB_HOST', 'localhost');
+	define('DB_HOST', '');
 }
 
 /** Database Charset to use in creating database tables. */
