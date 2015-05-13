@@ -8,6 +8,7 @@
  * @subpackage Boho
  * @since Boho
  */
+$angularAppStr = (isset($angularApp)) ? $angularApp : "";
 ?>
 <!DOCTYPE html>
 <!--[if IE 7]>
@@ -17,7 +18,7 @@
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 7) & !(IE 8)]><!-->
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); echo $angularAppStr; ?>>
 <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -80,7 +81,12 @@
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 			-->
 			<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-			<?php wp_nav_menu(); ?>
+			<?php 
+				wp_nav_menu(array(
+					'exclude' => '13,198'
+					,'depth' => 1 
+				));
+			 ?>
 		</nav><!-- #site-navigation -->
 
 		<?php if ( get_header_image() ) : ?>

@@ -38,10 +38,10 @@ if($_SERVER["SERVER_NAME"] == "aaronandhelen.local"){
 	define('DB_USER', 'i1134229_wp1');
 
 	/** MySQL database password */
-	define('DB_PASSWORD', '');
+	define('DB_PASSWORD', 'W#QZfZ(LQn99]~0');
 
 	/** MySQL hostname */
-	define('DB_HOST', '');
+	define('DB_HOST', 'localhost');
 }
 
 /** Database Charset to use in creating database tables. */
@@ -96,3 +96,4 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+

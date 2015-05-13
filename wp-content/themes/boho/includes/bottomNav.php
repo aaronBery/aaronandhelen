@@ -6,6 +6,6 @@
 		<a href="/wedding-gifts/">Wedding gifts</a>
 	</div>
 	<div class="col-layout-3col col-layout-3col--3-3">
-		<a href="<?php echo wp_logout_url(); ?>">Switch guest</a>
+		<a href="/rsvp/">RSVP</a>
 	</div>
 </div>
