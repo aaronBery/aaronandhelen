@@ -25,12 +25,12 @@ $allRsvp = $wpdb->get_results(
 
 function setBoolToStr($allRsvp){
 	foreach ($allRsvp as $key => $value) {
-		$value->Attending = ($value->Attending) ? "Yes" : "No";
-		$value->Vegetarian = ($value->Vegetarian) ? "Yes" : "No";
-		$value->DayGuest = ($value->DayGuest) ? "Yes" : "No";
-		$value->ParkingCar = ($value->ParkingCar) ? "Yes" : "No";
-		$value->isChild = ($value->isChild) ? "Yes" : "No";
-		$value->isBaby = ($value->isBaby) ? "Yes" : "No";
+		$value->Attending = ($value->Attending) ? "Attending" : "Declined";
+		$value->Vegetarian = ($value->Vegetarian) ? "Veggie" : "Herbivore";
+		$value->DayGuest = ($value->DayGuest) ? "Day" : "Evening";
+		$value->ParkingCar = ($value->ParkingCar) ? "Parking" : "Foot";
+		$value->isChild = ($value->isChild) ? "Child" : "No";
+		$value->isBaby = ($value->isBaby) ? "Baby" : "No";
 	}
 	return $allRsvp;
 }

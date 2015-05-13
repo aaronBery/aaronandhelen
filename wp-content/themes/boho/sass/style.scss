@@ -74,9 +74,11 @@ h1,h2,h3,h4,h5{
     color: white;
   }
 }
-.home #main{
-  padding: 0;
-  background: transparent;
+.home,.page-template-gallery-php{
+  #main{
+    padding: 0;
+    background: transparent;
+  }
 }
 header{
   color: white;
@@ -256,7 +258,7 @@ body.high-contrast-mode{
     display: block;
     float: left;
     border-right: 1px solid #fff;
-    padding: 3px 3em;
+    padding: 3px 2.2em;
     &.current_page_item{
       background: $coral;
       color: $brown;

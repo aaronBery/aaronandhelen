@@ -3,7 +3,7 @@ define(["angular"],
         var app = angular.module("rsvpApp", []);
 
 		app.controller("rsvpController", function($scope, $http) {
-	    	$http.get("/venue/json-feed/").success(function(data){
+	    	$http.get("/rsvp/angular-feed/").success(function(data){
 	    		$scope.xhrData = data;
 	    	});
 		});
