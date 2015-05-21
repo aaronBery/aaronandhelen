@@ -13,21 +13,26 @@ get_header(); ?>
 			<div class="carousel--arrows carousel--arrow--left" style="background-image:url(<?php echo $imagePath;?>arrows.png)"></div>
 			<div class="carousel--arrows carousel--arrow--right" style="background-image:url(<?php echo $imagePath;?>arrows.png)"></div>
 			<?php
+				if(get_the_ID()==2){
+					$imagesDir = "carousel";
+				}else{
+					$imagesDir = "gallery/engagement";
+				}
 				if(IS_DEV){
 					if(IS_WINDOWS_DEV){
-						$carouselDir = "F:/sites/aaronandhelen/wp-content/themes/boho/images/carousel";	
+						$carouselDir = "F:/sites/aaronandhelen/wp-content/themes/boho/images/" . $imagesDir;	
 					}else{
-						$carouselDir = "/var/www/aaronandhelen/wp-content/themes/boho/images/carousel";
+						$carouselDir = "/var/www/aaronandhelen/wp-content/themes/boho/images/" . $imagesDir;
 					}
 				}else{
-					$carouselDir = "/home/aaronaldo99/public_html/aaronandhelen/wp-content/themes/boho/images/carousel";
+					$carouselDir = "/home/aaronaldo99/public_html/aaronandhelen/wp-content/themes/boho/images/" . $imagesDir;
 				}
 				$carouselArr = scandir($carouselDir);
 				array_splice($carouselArr,0,2);
 				
 				foreach ($carouselArr as $carouselKey => $carouselEl) {
 					$currentElClass = ($carouselKey===0) ? " carousel--current" : "";
-					echo '<img data-count="' . $carouselKey . '" class="carousel--element' . $currentElClass . '" src="/wp-content/themes/boho/images/carousel/' . $carouselEl . '">';
+					echo '<img data-count="' . $carouselKey . '" class="carousel--element' . $currentElClass . '" src="/wp-content/themes/boho/images/' . $imagesDir . '/' . $carouselEl . '">';
 				}
 				//print_r($carouselArr);exit;
 			?>
