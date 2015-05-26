@@ -14,13 +14,15 @@ $sql = $wpdb->get_results(
 	r.DayGuest as DayGuest,
 	r.parentId as parentId,
 	r.Notes as Notes,
+	r.received_1month as received_1month,
 	u.user_email as email,
 	u.display_name as display_name
 	FROM " . $rsvpTable . " AS r 
 	LEFT JOIN " . $wpdb->prefix . "users AS u 
 	ON r.UserId = u.ID
 	WHERE user_email NOT LIKE '%aaronandhelen.com%'
-	AND Attending=1"
+	AND Attending=1
+	AND received_1month=0"
 	,OBJECT
 );
 $attendeesList = "";
@@ -81,7 +83,16 @@ foreach ($sql as $key => $value) {
 
 
 	$attendeesList .= $value->display_name . "<br />";
-	wp_mail($value->email,"Helen and Helen - - Less than a month to go!",$emailContent,$headers);
+	wp_mail($value->email,"Helen and Aaron - Less than a month to go!",$emailContent,$headers);
+	$wpdb->update(
+		$rsvpTable
+		,array(
+			'received_1month' => 1
+		)
+		,array(
+			'UserId' => $value->UserId
+		)
+	);
 }
 echo $emailContent;
 echo $attendeesList;
